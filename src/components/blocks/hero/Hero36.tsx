@@ -7,31 +7,50 @@ import { fadeInAnimate, slideInDownAnimate } from "utils/animation";
 export default function Hero36() {
   return (
     <section className="wrapper bg-gradient-primary">
+      <style jsx>{`
+        .hero-content {
+          font-family: 'IRANYekanX', 'Arial', sans-serif;
+          direction: rtl;
+          text-align: right;
+        }
+        
+        .hero-content .text-center {
+          text-align: center !important;
+        }
+        
+        .hero-content .text-lg-start {
+          text-align: right !important;
+        }
+      `}</style>
+      
       <div className="container pt-10 pt-md-14">
         <div className="row gx-2 gy-10 align-items-center">
-          <div className="col-md-10 offset-md-1 offset-lg-0 col-lg-5 text-center text-lg-start order-2 order-lg-0">
+          <div className="col-md-10 offset-md-1 offset-lg-0 col-lg-5 text-center text-lg-start order-2 order-lg-0 hero-content">
             <h1 className="display-1 mb-5 mx-md-10 mx-lg-0" style={slideInDownAnimate("600ms")}>
-              Create a powerful but effortless website for <br />
+              سیستم مدیریت مدرسه آنلاین قدرتمند و ساده برای <br />
               <span className="typer text-primary text-nowrap">
                 <Typewriter
                   options={{
                     loop: true,
                     autoStart: true,
-                    strings: ["your business.", "your portfolio.", "your startup.", "digital marketing."]
+                    strings: ["مدیریت آموزش", "کلاس‌های مجازی", "آزمون آنلاین", "گزارش‌گیری پیشرفته"]
                   }}
                 />
               </span>
             </h1>
 
             <p className="lead fs-23 mb-7" style={slideInDownAnimate("900ms")}>
-              Build Performant & SEO freindly website in minutes with Sandbox React.
+              سیستم جامع مدیریت مدرسه با امکانات پیشرفته، رابط کاربری ساده و پشتیبانی ۲۴ ساعته
             </p>
 
             <div
               className="d-flex justify-content-center justify-content-lg-start mb-4"
               style={slideInDownAnimate("1200ms")}>
-              <a className="btn btn-lg btn-primary rounded-pill me-2 scroll" href="#demos">
-                Check Demos
+              <a className="btn btn-lg btn-primary rounded-pill me-2 scroll" href="#features">
+                مشاهده امکانات
+              </a>
+              <a className="btn btn-lg btn-outline-primary rounded-pill" href="#contact">
+                درخواست دمو
               </a>
             </div>
           </div>
@@ -44,7 +63,7 @@ export default function Hero36() {
                     className="img-fluid rounded shadow-lg"
                     src="/img/demos/vc1.jpg"
                     srcSet="/img/demos/vc1@2x.jpg 2x"
-                    alt=""
+                    alt="سیستم مدیریت دانش‌آموزان"
                   />
                 </div>
 
@@ -53,7 +72,7 @@ export default function Hero36() {
                     className="img-fluid rounded shadow-lg"
                     src="/img/demos/vc2.jpg"
                     srcSet="/img/demos/vc2@2x.jpg 2x"
-                    alt=""
+                    alt="کلاس‌های مجازی"
                   />
                 </div>
 
@@ -62,7 +81,7 @@ export default function Hero36() {
                     className="img-fluid rounded shadow-lg"
                     src="/img/demos/vc3.jpg"
                     srcSet="/img/demos/vc3@2x.jpg 2x"
-                    alt=""
+                    alt="آزمون آنلاین"
                   />
                 </div>
               </div>
@@ -73,7 +92,7 @@ export default function Hero36() {
                     className="w-100 img-fluid rounded shadow-lg"
                     src="/img/demos/vc4.jpg"
                     srcSet="/img/demos/vc4@2x.jpg 2x"
-                    alt=""
+                    alt="داشبورد مدیریت"
                   />
                 </div>
 
@@ -82,7 +101,7 @@ export default function Hero36() {
                     className="w-100 img-fluid rounded shadow-lg mt-4"
                     src="/img/demos/vc5.jpg"
                     srcSet="/img/demos/vc5@2x.jpg 2x"
-                    alt=""
+                    alt="گزارشات تحلیلی"
                   />
                 </div>
 
@@ -91,7 +110,7 @@ export default function Hero36() {
                     className="w-100 img-fluid rounded shadow-lg mt-4"
                     src="/img/demos/vc6.jpg"
                     srcSet="/img/demos/vc6@2x.jpg 2x"
-                    alt=""
+                    alt="سیستم نمرات"
                   />
                 </div>
               </div>
@@ -102,7 +121,7 @@ export default function Hero36() {
                     className="img-fluid rounded shadow-lg"
                     src="/img/demos/vc7.jpg"
                     srcSet="/img/demos/vc7@2x.jpg 2x"
-                    alt=""
+                    alt="ارتباط با والدین"
                   />
                 </div>
 
@@ -111,7 +130,7 @@ export default function Hero36() {
                     className="img-fluid rounded shadow-lg"
                     src="/img/demos/vc8.jpg"
                     srcSet="/img/demos/vc8@2x.jpg 2x"
-                    alt=""
+                    alt="اپلیکیشن موبایل"
                   />
                 </div>
               </div>
