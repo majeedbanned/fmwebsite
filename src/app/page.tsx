@@ -1,689 +1,1123 @@
+"use client";
+
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
-import ReplaceMe from "components/ReplaceMe";
+import Tooltip from "components/Tooltip";
 import Navbar from "components/blocks/navbar/navbar-1";
+import { Hero36 } from "components/blocks/hero";
+import { Facts21 } from "components/blocks/facts";
+import { Footer8 } from "components/blocks/footer";
 import CountUp from "components/reuseable/CountUp";
-import Carousel from "components/reuseable/Carousel";
 import NextLink from "components/reuseable/links/NextLink";
-// CUSTOM ICON COMPONENT
-import Safe from "icons/solid/Safe";
-import Layers from "icons/solid/Layers";
-import Share from "icons/solid-mono/Share";
-import Puzzle from "icons/solid-mono/Puzzle";
-import PenTool from "icons/solid-duo/PenTool";
-import Devices from "icons/solid-mono/Devices";
-import GlobeTwo from "icons/solid-mono/GlobeTwo";
+import Projects from "./projects";
 
-export default function Home() {
+// Define custom font style
+const yekanFont = {
+  fontFamily: "'IRANYekanX', 'Arial', sans-serif",
+  direction: 'rtl' as const,
+  textAlign: 'right' as const
+};
+
+export default function Demo36() {
   return (
     <Fragment>
+      <style jsx global>{`
+        @font-face {
+          font-family: 'IRANYekanX';
+          src: url('/fonts/yekan/IRANYekanX-Regular.woff2') format('woff2'),
+               url('/fonts/yekan/IRANYekanX-Regular.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        @font-face {
+          font-family: 'IRANYekanX';
+          src: url('/fonts/yekan/IRANYekanX-Bold.woff2') format('woff2'),
+               url('/fonts/yekan/IRANYekanX-Bold.woff') format('woff');
+          font-weight: bold;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        @font-face {
+          font-family: 'IRANYekanX';
+          src: url('/fonts/yekan/IRANYekanX-Light.woff2') format('woff2'),
+               url('/fonts/yekan/IRANYekanX-Light.woff') format('woff');
+          font-weight: 300;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        @font-face {
+          font-family: 'IRANYekanX';
+          src: url('/fonts/yekan/IRANYekanX-Medium.woff2') format('woff2'),
+               url('/fonts/yekan/IRANYekanX-Medium.woff') format('woff');
+          font-weight: 500;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        .rtl-content {
+          font-family: 'IRANYekanX', 'Arial', sans-serif;
+          direction: rtl;
+          text-align: right;
+        }
+        
+        .rtl-content .text-center {
+          text-align: center !important;
+        }
+        
+        .rtl-content .text-left {
+          text-align: right !important;
+        }
+        
+        .rtl-content .text-right {
+          text-align: left !important;
+        }
+      `}</style>
+
+      {/* ========== topbar alert section ========== */}
+      <div className="alert bg-primary text-white fade show rounded-0 mb-1 text-center rtl-content" role="alert">
+        <div className="container">
+          <div className="alert-inner d-flex justify-content-center align-items-center p-0">
+            <p className="mb-0">
+              نرم‌افزار مدرسه آنلاین پارس آ موز آماده است!{" "}
+              <a
+                href="#"
+                className="link-white hover d-inline-flex align-items-center"
+                target="_blank">
+                همین حالا شروع کنید <i className="uil uil-arrow-up-left" />
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* ========== header section ========== */}
-      <header className="position-absolute w-100">
+      <header className="wrapper bg-soft-primary">
         <Navbar
+          logoAlt="logo-purple"
           navClassName="navbar navbar-expand-lg center-nav transparent navbar-light"
           button={
-            <a href="https://cutt.ly/P4rW6e4" className="btn btn-primary rounded-xl" target="_blank">
-              Purchase Now
-            </a>
+            <div className="d-flex gap-2">
+              <a
+                href="#services"
+                className="btn btn-outline-primary rounded-pill rtl-content">
+                خدمات ما
+              </a>
+              <a
+                href="#contact"
+                className="btn btn-primary rounded-pill rtl-content">
+                تماس با ما
+              </a>
+            </div>
           }
         />
       </header>
 
-      <main className="content-wrapper">
+      <main className="content-wrapper rtl-content">
         {/* ========== hero section ========== */}
-        <section className="wrapper overflow-hidden">
-          <div className="container pt-19 pt-md-21 pb-16 pb-md-18 text-center position-relative">
-            <div
-              data-cue="fadeIn"
-              className="position-absolute"
-              style={{ top: "-12%", left: "50%", transform: "translateX(-50%)" }}>
-              <img src="/img/photos/blurry.png" alt="Blurry" />
+        <Hero36 />
+
+        {/* ========== services navigation menu ========== */}
+        <section className="wrapper bg-gradient-primary">
+          <div className="container py-8">
+            <div className="row text-center mb-6">
+              <div className="col-lg-10 mx-auto">
+                <h3 className="display-6 text-white mb-3">دسترسی سریع به خدمات</h3>
+                <p className="lead text-white opacity-90">با یک کلیک به تمام سرویس‌های مدرسه آنلاین دسترسی داشته باشید</p>
+              </div>
             </div>
-
-            <div className="row position-relative">
-              <div className="col-lg-8 col-xxl-7 mx-auto position-relative">
-                <div
-                  data-cue="fadeIn"
-                  data-delay="1500"
-                  className="position-absolute shape grape w-5 d-none d-lg-block"
-                  style={{ top: "-5%", left: "-15%" }}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 219.5 219.5"
-                    className="svg-inject icon-svg w-100 h-100">
-                    <path
-                      className="svg-fill"
-                      d="M219.5 219.5H0c0-58.19 23.14-114.06 64.29-155.21A219.561 219.561 0 01219.5 0v219.5z"
-                    />
-                  </svg>
+            
+            <div className="row gy-4">
+              <div className="col-lg-3 col-md-6">
+                <div className="card bg-white border-0 shadow-lg h-100 hover-effect">
+                  <div className="card-body text-center p-4">
+                    <div className="icon btn btn-circle btn-lg btn-soft-primary mb-3">
+                      <i className="uil uil-users-alt"></i>
+                    </div>
+                    <h5 className="mb-2">سیستم‌های مدیریت</h5>
+                    <p className="mb-3 text-muted">مدیریت دانش‌آموزان، معلمان و کلاس‌ها</p>
+                    <div className="d-flex gap-1 justify-content-center">
+                      <a href="/initiation" className="btn btn-sm btn-primary rounded-pill">پایه</a>
+                      <a href="/dashboard" className="btn btn-sm btn-outline-primary rounded-pill">داشبورد</a>
+                    </div>
+                  </div>
                 </div>
-
-                <div
-                  data-cue="fadeIn"
-                  data-delay="1500"
-                  className="position-absolute shape violet w-10 d-none d-lg-block"
-                  style={{ bottom: "30%", left: "-20%" }}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 457.71 446.45"
-                    className="svg-inject icon-svg w-100 h-100">
-                    <path
-                      className="svg-fill"
-                      d="M205.62 442.54c-.51-.41-.99-.84-1.46-1.31-10.4-10.39-3.61-27.12 11.63-52.5 11.72-19.51 28.48-43.74 46.22-69.39 17.53-25.34 35.66-51.54 49.01-73.47 14.73-24.19 18.57-35.01 19.51-39.48-3.86-.28-13.15.3-33.78 6.52-19.71 5.94-43.09 14.92-65.7 23.6-63.8 24.49-85.35 31.41-96.51 19.5-3.21-3.43-7.62-11.04-1.12-23.54 2.49-4.79 6.64-10.51 12.68-17.5 10.4-12.03 25.04-26.34 40.55-41.49 14.02-13.7 28.53-27.87 39.53-40.11 9.93-11.04 14.15-17.43 15.94-20.82-3.43-.75-10.24-1.51-23.25-.92-14.99.68-33.44 2.89-51.28 5.02-46.92 5.61-74.09 8.33-86.81-.99-4.78-3.5-7.67-8.42-8.41-14.24-1.97-15.58 12.45-33.15 29.14-53.5 5.31-6.47 13.31-16.22 17.36-22.68-4.51-.38-12.43-.4-25.97 1.1-16.54 1.82-35.62 5.22-50.95 7.96-12.62 2.25-22.6 4.03-28.48 4.49C6.6 39.3.58 34.17.04 27.28c-.54-6.88 4.6-12.9 11.48-13.44 4.66-.37 14.58-2.13 26.06-4.18C54.56 6.63 75.7 2.86 94 1.07c26.41-2.6 40.16-.54 47.48 7.13 7.01 7.34 6.45 17.66-1.68 30.66-4.72 7.55-11.63 15.98-18.95 24.9-6.18 7.53-12.57 15.31-17.24 22.19-3.35 4.92-4.95 8.13-5.71 10.07 3 .54 9.09 1.08 20.87.43 13.21-.73 29.07-2.63 45.86-4.64 59.99-7.17 94.33-10.22 102.49 10.62 7.4 18.93-16.51 43.51-62.99 88.92-12.69 12.4-24.68 24.11-34.04 34.28-3.17 3.45-5.68 6.34-7.67 8.75 15.88-4.42 41.18-14.13 59.67-21.22 62.4-23.96 101.69-37.87 121.09-29.14 5.38 2.42 9.26 6.47 11.23 11.72 7.48 19.95-16.15 57.31-71.83 137.82-15.49 22.39-30.12 43.55-41.18 61.25-7.13 11.4-11.3 19.11-13.75 24.25 8.97-3.3 25.58-11 55.73-28.8 32.68-19.29 70.61-44.04 101.09-63.94 24.62-16.07 44.07-28.76 54.65-34.68 6.03-3.37 13.64-1.22 17.01 4.81 3.37 6.03 1.22 13.64-4.81 17.01-9.83 5.5-29.92 18.61-53.18 33.79-33.46 21.84-75.1 49.01-110.05 69.21-49.35 28.51-70.85 35.44-82.46 26.07z"
-                    />
-                  </svg>
+              </div>
+              
+              <div className="col-lg-3 col-md-6">
+                <div className="card bg-white border-0 shadow-lg h-100 hover-effect">
+                  <div className="card-body text-center p-4">
+                    <div className="icon btn btn-circle btn-lg btn-soft-yellow mb-3">
+                      <i className="uil uil-graduation-cap"></i>
+                    </div>
+                    <h5 className="mb-2">ارزیابی و آزمون</h5>
+                    <p className="mb-3 text-muted">آزمون آنلاین، بانک سوالات و نمره‌دهی</p>
+                    <div className="d-flex gap-1 justify-content-center flex-wrap">
+                      <a href="/onlineexam" className="btn btn-sm btn-yellow rounded-pill">آزمون</a>
+                      <a href="/questionbank" className="btn btn-sm btn-outline-yellow rounded-pill">سوالات</a>
+                      <a href="/gradingsystem" className="btn btn-sm btn-outline-yellow rounded-pill">نمرات</a>
+                    </div>
+                  </div>
                 </div>
-
-                <div
-                  data-cue="fadeIn"
-                  data-delay="1500"
-                  className="position-absolute shape fuchsia w-6 d-none d-lg-block"
-                  style={{ top: "0%", right: "-25%", transform: "rotate(70deg)" }}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 411.42 329.24"
-                    className="svg-inject icon-svg w-100 h-100">
-                    <g data-name="Layer 2">
-                      <path
-                        className="svg-fill"
-                        d="M164.34 21.92L8.72 251.15c-22.54 33.2 1.24 78.09 41.37 78.09h311.24c40.13 0 63.91-44.89 41.37-78.09L247.08 21.92a50 50 0 00-82.74 0z"
-                        data-name="Layer 1"
-                      />
-                    </g>
-                  </svg>
+              </div>
+              
+              <div className="col-lg-3 col-md-6">
+                <div className="card bg-white border-0 shadow-lg h-100 hover-effect">
+                  <div className="card-body text-center p-4">
+                    <div className="icon btn btn-circle btn-lg btn-soft-green mb-3">
+                      <i className="uil uil-comment-dots"></i>
+                    </div>
+                    <h5 className="mb-2">ارتباطات</h5>
+                    <p className="mb-3 text-muted">پیام‌رسانی، چت و مدیریت رویدادها</p>
+                    <div className="d-flex gap-1 justify-content-center flex-wrap">
+                      <a href="/communications" className="btn btn-sm btn-green rounded-pill">پیام</a>
+                      <a href="/mychat" className="btn btn-sm btn-outline-green rounded-pill">چت</a>
+                      <a href="/agenda" className="btn btn-sm btn-outline-green rounded-pill">تقویم</a>
+                    </div>
+                  </div>
                 </div>
-
-                <div
-                  data-cue="fadeIn"
-                  data-delay="1500"
-                  className="position-absolute shape yellow w-6 d-none d-lg-block"
-                  style={{ bottom: "25%", right: "-17%" }}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 500 500"
-                    className="svg-inject icon-svg w-100 h-100">
-                    <g data-name="Layer 2">
-                      <path
-                        className="svg-fill"
-                        d="M250 0C111.93 0 0 111.93 0 250s111.93 250 250 250 250-111.93 250-250S388.07 0 250 0zm0 425a175 175 0 11175-175 175 175 0 01-175 175z"
-                        data-name="Layer 1"
-                      />
-                    </g>
-                  </svg>
-                </div>
-
-                <div data-cues="slideInDown" data-group="page-title">
-                  <h1 className="display-1 fs-64 mb-5 mx-md-10 mx-lg-0">
-                    Create a powerful but effortless website for <br />
-                    <ReplaceMe className="rotator-fade text-primary">
-                      your business.,your portfolio.,your startup.,digital marketing.
-                    </ReplaceMe>
-                  </h1>
-
-                  <p className="lead fs-24 mb-8">
-                    You can create your website in minutes with the help of countless amazing features of Sandbox.
-                  </p>
-                </div>
-
-                <div className="d-flex justify-content-center" data-cues="slideInDown" data-delay="600">
-                  <span>
-                    <a href="#demos" className="btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl mx-1 scroll">
-                      See Demo Pages <i className="uil uil-arrow-down-right" />
-                    </a>
-                  </span>
-
-                  <span>
-                    <a
-                      href="https://1.envato.market/Ea4VxK"
-                      className="btn btn-lg btn-fuchsia btn-icon btn-icon-end rounded-xl mx-1"
-                      target="_blank">
-                      Next.js Version <i className="uil uil-arrow-up-right" />
-                    </a>
-                  </span>
+              </div>
+              
+              <div className="col-lg-3 col-md-6">
+                <div className="card bg-white border-0 shadow-lg h-100 hover-effect">
+                  <div className="card-body text-center p-4">
+                    <div className="icon btn btn-circle btn-lg btn-soft-purple mb-3">
+                      <i className="uil uil-chart-bar"></i>
+                    </div>
+                    <h5 className="mb-2">گزارشات و ابزارها</h5>
+                    <p className="mb-3 text-muted">گزارشات، حسابداری و فایل منیجر</p>
+                    <div className="d-flex gap-1 justify-content-center flex-wrap">
+                      <a href="/accounting" className="btn btn-sm btn-purple rounded-pill">حسابداری</a>
+                      <a href="/classsheet" className="btn btn-sm btn-outline-purple rounded-pill">گزارشات</a>
+                      <a href="/fileexplorer" className="btn btn-sm btn-outline-purple rounded-pill">فایل‌ها</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="swiper-container swiper-auto swiper-auto-xs mb-8">
-            <Carousel
-              loop
-              updateOnWindowResize
-              speed={7000}
-              spaceBetween={40}
-              navigation={false}
-              pagination={false}
-              slidesPerView="auto"
-              autoplay={{ delay: 1 }}
-              wrapperClass="swiper-wrapper ticker"
-              className="overflow-visible pe-none">
-              {[8, 9, 10, 11, 12, 13, 14].map((num) => (
-                <figure className="rounded-xl shadow-xl" key={num}>
-                  <img src={`/img/photos/ma${num}.jpg`} srcSet={`/img/photos/ma${num}@2x.jpg 2x`} alt="" />
-                </figure>
-              ))}
-            </Carousel>
-          </div>
-
-          <div className="swiper-container swiper-auto swiper-auto-xs mb-10 mb-md-12">
-            <Carousel
-              loop
-              updateOnWindowResize
-              speed={7000}
-              spaceBetween={40}
-              navigation={false}
-              pagination={false}
-              slidesPerView="auto"
-              autoplay={{ delay: 1 }}
-              wrapperClass="swiper-wrapper ticker"
-              className="overflow-visible pe-none"
-              dir="rtl">
-              {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-                <figure className="rounded-xl shadow-xl" key={num}>
-                  <img src={`/img/photos/ma${num}.jpg`} srcSet={`/img/photos/ma${num}@2x.jpg 2x`} alt="" />
-                </figure>
-              ))}
-            </Carousel>
           </div>
         </section>
 
-        <section className="wrapper bg-soft-primary" id="demos">
-          <div className="container pt-16 pt-mb-18">
+        {/* ========== services section ========== */}
+        <section className="wrapper bg-light" id="services">
+          <div className="container py-14 py-md-18 pb-md-19">
             <div className="row mb-10">
-              <div className="col-md-9 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-                <div className="counter-wrapper">
-                  <h3 className="fs-70 mb-3 text-primary text-center counter">34</h3>
-                </div>
-
-                <h2 className="display-2 mb-3 text-center mb-0 px-xxl-8">
-                  Functional, impressive and rich demos to start with
-                </h2>
-              </div>
-            </div>
-
-            {/* ========== new demos section ========== */}
-            <div className="demos-wrapper text-center mb-16 mb-md-18">
-              <h2 className="fs-17 text-uppercase text-muted mb-6">New Demos</h2>
-
-              <div className="row mb-10 gx-md-8 gy-12">
-                {[18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36].map((item) => (
-                  <div className="col-md-6 col-lg-4" key={item}>
-                    <figure className="lift rounded-xl mb-6" title="Click to see the demo">
-                      <a href={`/demo-${item}`} target="_blank">
-                        <img
-                          alt=""
-                          className="shadow-xl"
-                          src={`/img/demos/d${item}.jpg`}
-                          srcSet={`/img/demos/d${item}@2x.jpg 2x`}
-                        />
-                      </a>
-                    </figure>
-
-                    <h2 className="fs-22 mb-0">
-                      <NextLink title={`Layout ${item}`} href={`/demo-${item}`} className="link-dark" />
-                    </h2>
-                  </div>
-                ))}
-
-                <div className="col-md-6 col-lg-4 d-none d-md-flex align-items-center justify-content-center flex-column">
-                  <Layers />
-
-                  <h3 className="fs-17 text-uppercase text-muted mb-4">Scroll for more</h3>
-
-                  <a href="#prev-demos" className="btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl mx-1 scroll">
-                    Previous Demos <i className="uil uil-arrow-down-right" />
-                  </a>
-                </div>
-              </div>
-
-              <h2 className="fs-17 text-uppercase text-muted pt-16 mt-n8 mb-6" id="prev-demos">
-                Previous Demos
-              </h2>
-
-              <div className="row mb-10 gx-md-8 gy-12">
-                {Array.from({ length: 17 }).map((_, i) => {
-                  const num = i + 1;
-
-                  return (
-                    <div className="col-md-6 col-lg-4" key={num}>
-                      <figure className="lift rounded-xl mb-6" title="Click to see the demo">
-                        <a href={`/demo-${num}`} target="_blank">
-                          <img
-                            alt=""
-                            className="shadow-xl"
-                            src={`/img/demos/d${num}.jpg`}
-                            srcSet={`/img/demos/d${num}@2x.jpg 2x`}
-                          />
-                        </a>
-                      </figure>
-
-                      <h2 className="fs-22 mb-0">
-                        <NextLink title={`Layout ${num}`} href={`/demo-${num}`} className="link-dark" />
-                      </h2>
+              <div className="col-md-9 col-lg-7 col-xl-6 col-xxl-5 mx-auto">
+                <div className="row gy-6 text-center">
+                  <div className="col-md-3">
+                    <div className="counter-wrapper">
+                      <h3 className="fs-40 mb-2 text-primary counter">
+                        <CountUp end={14} />+
+                      </h3>
+                      <p className="mb-0">سرویس اختصاصی</p>
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="row mb-8 text-center">
-              <div className="col-md-11 col-lg-10 col-xl-8 col-xxl-7 mx-auto">
-                <h2 className="display-2 mt-3 mb-3 mb-0 px-lg-10 px-xl-0">
-                  Save your time and money by choosing Sandbox for your website.
-                </h2>
-              </div>
-            </div>
-
-            {/* ========== Previous demos section ========== */}
-            <div className="row mb-12 mb-md-14">
-              <div className="col-lg-10 col-xl-8 col-xxl-7 mx-auto">
-                <div className="row align-items-center counter-wrapper gy-6 text-center">
-                  <div className="col-md-4">
-                    <h3 className="counter fs-50 text-primary mb-1">
-                      <CountUp end={250} suffix="+" />
-                    </h3>
-                    <p className="fs-18 mb-0">UI elements</p>
                   </div>
-
-                  <div className="col-md-4">
-                    <h3 className="counter fs-50 text-primary mb-1">
-                      <CountUp end={130} suffix="+" />
-                    </h3>
-                    <p className="fs-18 mb-0">Pre-made blocks</p>
+                  <div className="col-md-3">
+                    <div className="counter-wrapper">
+                      <h3 className="fs-40 mb-2 text-green counter">
+                        <CountUp end={100} />+
+                      </h3>
+                      <p className="mb-0">قابلیت منحصربه‌فرد</p>
+                    </div>
                   </div>
-
-                  <div className="col-md-4">
-                    <h3 className="counter fs-50 text-primary mb-1">
-                      <CountUp end={100} suffix="+" />
-                    </h3>
-                    <p className="fs-18 mb-0">Neatly coded pages</p>
+                  <div className="col-md-3">
+                    <div className="counter-wrapper">
+                      <h3 className="fs-40 mb-2 text-yellow counter">
+                        <CountUp end={24} />/<CountUp end={7} />
+                      </h3>
+                      <p className="mb-0">پشتیبانی</p>
+                    </div>
+                  </div>
+                  <div className="col-md-3">
+                    <div className="counter-wrapper">
+                      <h3 className="fs-40 mb-2 text-purple counter">
+                        <CountUp end={99} />%
+                      </h3>
+                      <p className="mb-0">رضایت کاربران</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row mt-10">
+                  <div className="col-md-10 mx-auto text-center">
+                    <h2 className="display-3 mb-4">پلتفرم کامل مدیریت مدرسه آنلاین</h2>
+                    <p className="lead mb-0">
+                      از مدیریت دانش‌آموزان تا سیستم‌های پیشرفته ارزیابی، ارتباطات و گزارش‌گیری - همه چیز در یک مکان
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* ========== feature 1 section ========== */}
-            <div className="row gx-lg-0 gy-10 align-items-center mb-16 mb-md-18">
-              <div className="col-lg-7 position-relative">
+            {/* USER FOR TOOLTIP FUNCTIONALITY */}
+            <Tooltip />
+
+            <div className="demos-wrapper">
+              {/* Feature 1 - Management Systems */}
+              <div className="demo mb-10">
+                <div className="card bg-soft-primary">
+                    <div className="card-body px-4 px-md-8 ps-xl-12 py-0 overflow-hidden">
+                      <div className="row gx-md-8 gx-xl-12 d-flex align-items-center">
+                        <div className="col-lg-7">
+                          <div className="row gx-4 gx-md-7">
+                            <div className="col-6">
+                            <figure className="itooltip itooltip-yellow mt-9" title="سیستم‌های مدیریت پایه">
+                              <div>
+                                  <img
+                                  alt="سیستم‌های مدیریت پایه"
+                                    className="shadow-lg rounded-top"
+                                  src="/img/demos/fe1.jpg"
+                                  srcSet="/img/demos/fe1@2x.jpg 2x"
+                                  />
+                              </div>
+                              </figure>
+                            </div>
+
+                            <div className="col-6">
+                            <figure className="itooltip itooltip-yellow" title="داشبورد هوشمند">
+                              <div>
+                                  <img
+                                  alt="داشبورد شخصی‌سازی شده"
+                                    className="shadow-lg rounded-bottom"
+                                  src="/img/demos/fe2.jpg"
+                                  srcSet="/img/demos/fe2@2x.jpg 2x"
+                                />
+                              </div>
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-5 d-none d-lg-block py-3">
+                        <h2 className="post-title fs-30 mb-4">سیستم‌های مدیریت و داشبورد</h2>
+                        <ul className="icon-list bullet-primary row ms-0 gy-2">
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>مدیریت دانش‌آموزان</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>مدیریت معلمان</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>مدیریت کلاس‌ها</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>داشبورد شخصی‌سازی</span>
+                          </li>
+                        </ul>
+
+                        <div className="d-flex gap-2">
+                          <a
+                            href="/initiation"
+                            className="btn btn-sm btn-primary rounded-pill mt-1">
+                            سیستم‌های پایه
+                          </a>
+                          <a
+                            href="/dashboard"
+                            className="btn btn-sm btn-outline-primary rounded-pill mt-1">
+                            داشبورد
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 2 - Assessment & Evaluation */}
+              <div className="demo mb-10">
+                <div className="card bg-soft-yellow">
+                  <div className="card-body px-4 px-md-8 ps-xl-12 py-0 overflow-hidden">
+                    <div className="row gx-md-8 gx-xl-12 d-flex align-items-center">
+                      <div className="col-lg-7">
+                        <div className="row gx-4 gx-md-7">
+                          <div className="col-6">
+                            <figure className="itooltip itooltip-yellow mt-9" title="آزمون آنلاین و بانک سوالات">
+                              <div>
+                                <img
+                                  alt="سیستم آزمون آنلاین"
+                                  className="shadow-lg rounded-top"
+                                  src="/img/demos/fe3.jpg"
+                                  srcSet="/img/demos/fe3@2x.jpg 2x"
+                                />
+                              </div>
+                            </figure>
+                          </div>
+
+                          <div className="col-6">
+                            <figure className="itooltip itooltip-yellow" title="سیستم نمره‌دهی">
+                              <div>
+                                <img
+                                  alt="نمره‌دهی و کارنامه"
+                                  className="shadow-lg rounded-bottom"
+                                  src="/img/demos/fe4.jpg"
+                                  srcSet="/img/demos/fe4@2x.jpg 2x"
+                                  />
+                              </div>
+                              </figure>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="col-lg-5 d-none d-lg-block py-3">
+                        <h2 className="post-title fs-30 mb-4">ارزیابی و آزمون‌سازی</h2>
+                        <ul className="icon-list bullet-yellow row ms-0 gy-2">
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>آزمون آنلاین</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>بانک سوالات</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>نمره‌دهی هوشمند</span>
+                          </li>
+                          <li className="col-md-6">
+                                <i className="uil uil-check" />
+                            <span>کارنامه ساز</span>
+                              </li>
+                          </ul>
+
+                          <div className="d-flex gap-2 flex-wrap">
+                            <a
+                              href="/onlineexam"
+                              className="btn btn-sm btn-yellow rounded-pill mt-1">
+                              آزمون آنلاین
+                            </a>
+                            <a
+                              href="/questionbank"
+                              className="btn btn-sm btn-outline-yellow rounded-pill mt-1">
+                              بانک سوالات
+                            </a>
+                            <a
+                              href="/gradingsystem"
+                              className="btn btn-sm btn-outline-yellow rounded-pill mt-1">
+                              نمره‌دهی
+                            </a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 3 - Management & Communication */}
+              <div className="demo mb-10">
+                <div className="card bg-soft-green">
+                  <div className="card-body px-4 px-md-8 ps-xl-12 py-0 overflow-hidden">
+                    <div className="row gx-md-8 gx-xl-12 d-flex align-items-center">
+                      <div className="col-lg-7">
+                        <div className="row gx-4 gx-md-7">
+                          <div className="col-6">
+                            <figure className="itooltip itooltip-yellow mt-9" title="مدیریت مالی و حسابداری">
+                              <div>
+                                <img
+                                  alt="مدیریت مالی"
+                                  className="shadow-lg rounded-top"
+                                  src="/img/demos/fe5.jpg"
+                                  srcSet="/img/demos/fe5@2x.jpg 2x"
+                                />
+                              </div>
+                            </figure>
+                          </div>
+
+                          <div className="col-6">
+                            <figure className="itooltip itooltip-yellow" title="ارتباطات و تقویم">
+                              <div>
+                                <img
+                                  alt="ارتباطات و مدیریت رویدادها"
+                                  className="shadow-lg rounded-bottom"
+                                  src="/img/demos/fe6.jpg"
+                                  srcSet="/img/demos/fe6@2x.jpg 2x"
+                                />
+                              </div>
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-5 d-none d-lg-block py-3">
+                        <h2 className="post-title fs-30 mb-4">مدیریت و ارتباطات</h2>
+                        <ul className="icon-list bullet-green row ms-0 gy-2">
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>حسابداری مدرسه</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>تقویم و رویدادها</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>ارتباطات</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>مدیریت فایل</span>
+                          </li>
+                        </ul>
+
+                        <div className="d-flex gap-2 flex-wrap">
+                          <a
+                            href="/accounting"
+                            className="btn btn-sm btn-green rounded-pill mt-1">
+                            حسابداری
+                          </a>
+                          <a
+                            href="/agenda"
+                            className="btn btn-sm btn-outline-green rounded-pill mt-1">
+                            تقویم
+                          </a>
+                          <a
+                            href="/communications"
+                            className="btn btn-sm btn-outline-green rounded-pill mt-1">
+                            ارتباطات
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Services Section */}
+              <div className="demo mb-10">
+                <div className="card bg-soft-purple">
+                  <div className="card-body px-4 px-md-8 ps-xl-12 py-0 overflow-hidden">
+                    <div className="row gx-md-8 gx-xl-12 d-flex align-items-center">
+                      <div className="col-lg-7">
+                        <div className="row gx-4 gx-md-7">
+                          <div className="col-6">
+                            <figure className="itooltip itooltip-yellow mt-9" title="گزارشات پیشرفته">
+                              <div>
+                                <img
+                                  alt="گزارشات کلاسی"
+                                  className="shadow-lg rounded-top"
+                                  src="/img/demos/fe7.jpg"
+                                  srcSet="/img/demos/fe7@2x.jpg 2x"
+                                />
+                              </div>
+                            </figure>
+                          </div>
+
+                          <div className="col-6">
+                            <figure className="itooltip itooltip-yellow" title="گزارشات نمرات">
+                              <div>
+                                <img
+                                  alt="گزارشات نمرات ماهانه"
+                                  className="shadow-lg rounded-bottom"
+                                  src="/img/demos/fe8.jpg"
+                                  srcSet="/img/demos/fe8@2x.jpg 2x"
+                                />
+                              </div>
+                            </figure>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-5 d-none d-lg-block py-3">
+                        <h2 className="post-title fs-30 mb-4">گزارشات و فعالیت‌ها</h2>
+                        <ul className="icon-list bullet-purple row ms-0 gy-2">
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>گزارش کلاسی</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>نمرات ماهانه</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>فعالیت‌های معلم</span>
+                          </li>
+                          <li className="col-md-6">
+                            <i className="uil uil-check" />
+                            <span>چت مدرسه</span>
+                          </li>
+                        </ul>
+
+                        <div className="d-flex gap-2 flex-wrap">
+                          <a
+                            href="/classsheet"
+                            className="btn btn-sm btn-purple rounded-pill mt-1">
+                            گزارش کلاسی
+                          </a>
+                          <a
+                            href="/monthlygrade"
+                            className="btn btn-sm btn-outline-purple rounded-pill mt-1">
+                            نمرات ماهانه
+                          </a>
+                          <a
+                            href="/tactivities"
+                            className="btn btn-sm btn-outline-purple rounded-pill mt-1">
+                            فعالیت‌ها
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <div className="d-flex gap-3 justify-content-center flex-wrap">
+                <NextLink title="مشاهده همه خدمات" href="/services-2" className="btn btn-primary rounded-pill" />
+                <NextLink title="فایل اکسپلورر" href="/fileexplorer" className="btn btn-outline-primary rounded-pill" />
+                <NextLink title="چت مدرسه" href="/mychat" className="btn btn-outline-primary rounded-pill" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========== comprehensive overview section ========== */}
+        <section className="wrapper bg-gradient-reverse-primary">
+          <div className="container py-16 py-md-18">
+            <div className="row text-center mb-12">
+              <div className="col-lg-8 mx-auto">
+                <h2 className="fs-15 text-uppercase text-line text-white mb-3">نظام جامع آموزش</h2>
+                <h3 className="display-4 text-white mb-5">راه‌حل کامل مدیریت مدرسه دیجیتال</h3>
+                <p className="lead text-white opacity-90">
+                  سیستم پارس آ موز با بیش از ۱۴ سرویس تخصصی، تمام نیازهای مدیریتی، آموزشی و اداری مدارس مدرن را پوشش می‌دهد
+                </p>
+              </div>
+            </div>
+
+            <div className="row gy-10 gx-lg-8 gx-xl-12 align-items-center">
+              {/* Left Column - Key Benefits */}
+              <div className="col-lg-6">
+                <div className="row gy-6">
+                  <div className="col-md-6">
+                    <div className="d-flex">
+                      <div>
+                        <div className="icon btn btn-circle btn-lg btn-white text-primary me-4">
+                          <i className="uil uil-brain"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-white mb-2">هوش مصنوعی</h4>
+                        <p className="text-white opacity-80 mb-0">تحلیل‌های هوشمند و پیش‌بینی عملکرد دانش‌آموزان</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="d-flex">
+                      <div>
+                        <div className="icon btn btn-circle btn-lg btn-white text-primary me-4">
+                          <i className="uil uil-cloud-computing"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-white mb-2">پلتفرم ابری</h4>
+                        <p className="text-white opacity-80 mb-0">دسترسی از هر مکان و در هر زمان بدون نیاز به نصب</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="d-flex">
+                      <div>
+                        <div className="icon btn btn-circle btn-lg btn-white text-primary me-4">
+                          <i className="uil uil-shield-check"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-white mb-2">امنیت بالا</h4>
+                        <p className="text-white opacity-80 mb-0">رمزنگاری کامل و پشتیبان‌گیری خودکار اطلاعات</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="d-flex">
+                      <div>
+                        <div className="icon btn btn-circle btn-lg btn-white text-primary me-4">
+                          <i className="uil uil-mobile-android"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-white mb-2">اپلیکیشن موبایل</h4>
+                        <p className="text-white opacity-80 mb-0">دسترسی کامل از طریق اپ اختصاصی iOS و Android</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Service Categories */}
+              <div className="col-lg-6">
+                <div className="row gy-4">
+                  <div className="col-12">
+                    <div className="card bg-white border-0 shadow-lg">
+                      <div className="card-body p-5">
+                        <div className="d-flex align-items-center mb-3">
+                          <div className="icon btn btn-circle btn-soft-primary me-3">
+                            <i className="uil uil-users-alt"></i>
+                          </div>
+                          <h5 className="mb-0">سیستم‌های مدیریت پایه</h5>
+                        </div>
+                        <p className="mb-3">مدیریت جامع دانش‌آموزان، معلمان، کلاس‌ها و داشبورد شخصی‌سازی شده</p>
+                        <div className="d-flex gap-2">
+                          <span className="badge bg-soft-primary text-primary">مدیریت کاربران</span>
+                          <span className="badge bg-soft-primary text-primary">داشبورد هوشمند</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="col-12">
+                    <div className="card bg-white border-0 shadow-lg">
+                      <div className="card-body p-5">
+                        <div className="d-flex align-items-center mb-3">
+                          <div className="icon btn btn-circle btn-soft-yellow me-3">
+                            <i className="uil uil-graduation-cap"></i>
+                          </div>
+                          <h5 className="mb-0">سیستم‌های آموزشی و ارزیابی</h5>
+                        </div>
+                        <p className="mb-3">آزمون آنلاین، بانک سوالات، نمره‌دهی هوشمند و تولید کارنامه</p>
+                        <div className="d-flex gap-2">
+                          <span className="badge bg-soft-yellow text-yellow">آزمون‌سازی</span>
+                          <span className="badge bg-soft-yellow text-yellow">ارزیابی خودکار</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="col-12">
+                    <div className="card bg-white border-0 shadow-lg">
+                      <div className="card-body p-5">
+                        <div className="d-flex align-items-center mb-3">
+                          <div className="icon btn btn-circle btn-soft-green me-3">
+                            <i className="uil uil-comment-message"></i>
+                          </div>
+                          <h5 className="mb-0">ارتباطات و مدیریت</h5>
+                        </div>
+                        <p className="mb-3">چت لحظه‌ای، پیامک انبوه، تقویم رویدادها و حسابداری مدرسه</p>
+                        <div className="d-flex gap-2">
+                          <span className="badge bg-soft-green text-green">ارتباط مؤثر</span>
+                          <span className="badge bg-soft-green text-green">مدیریت مالی</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========== facts section ========== */}
+        <Facts21 />
+
+        {/* ========== detailed features section ========== */}
+        <section className="wrapper bg-light" id="all-features">
+          <div className="container pb-11 pb-md-14">
+            <div className="row gx-lg-8 gx-xl-0 gy-10 align-items-center mb-14 mb-md-16">
+              <div className="col-lg-6 position-relative">
                 <div
-                  className="position-absolute"
+                  className="shape rounded bg-soft-primary rellax d-block"
                   style={{
                     zIndex: 0,
                     top: "50%",
                     left: "50%",
-                    width: "140%",
-                    height: "auto",
+                    width: "50%",
+                    height: "60%",
                     transform: "translate(-50%,-50%)"
-                  }}>
-                  <img className="w-100" src="/img/photos/blurry.png" alt="" />
-                </div>
+                  }}
+                />
 
-                <figure className="position-relative" style={{ zIndex: 2 }}>
-                  <img src="/img/photos/mi1.png" srcSet="/img/photos/mi1@2x.png 2x" alt="" />
-                </figure>
+                <div className="row gx-md-5 gy-5 position-relative">
+                  <div className="col-6">
+                    <img
+                      alt="مدیریت آموزش"
+                      src="/img/demos/fe1.jpg"
+                      srcSet="/img/demos/fe1@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg mb-5"
+                    />
+                    <img
+                      alt="سیستم نمرات"
+                      src="/img/demos/fe2.jpg"
+                      srcSet="/img/demos/fe2@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
+                    />
+                  </div>
+
+                  <div className="col-6">
+                    <img
+                      alt="حضور و غیاب"
+                      src="/img/demos/fe3.jpg"
+                      srcSet="/img/demos/fe3@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg my-5"
+                    />
+                    <img
+                      alt="برنامه کلاسی"
+                      src="/img/demos/fe4.jpg"
+                      srcSet="/img/demos/fe4@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg d-flex col-10"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div className="col-lg-4 ms-auto">
-                <div className="d-flex flex-row mb-6">
+              <div className="col-lg-6 col-xl-5 col-xxl-4 offset-xl-1">
+                <div className="d-flex flex-row mb-7">
                   <div>
-                    <div className="svg-bg bg-white rounded-xl shadow-xl me-5">
-                      <Puzzle className="solid-duo text-grape-fuchsia" />
+                    <div className="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4">
+                      <i className="uil uil-graduation-cap" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="mb-1">Color and Font Options</h4>
-                    <p className="mb-0">Easily customize colors and fonts, or choose from provided options.</p>
+                    <h4 className="mb-1">مدیریت کامل آموزش</h4>
+                    <p className="mb-0">
+                      سیستم جامع برای مدیریت دروس، اساتید، دانش‌آموزان و برنامه‌های درسی
+                    </p>
                   </div>
                 </div>
 
-                <div className="d-flex flex-row mb-6">
+                <div className="d-flex flex-row mb-7">
                   <div>
-                    <div className="svg-bg bg-white rounded-xl shadow-xl me-5">
-                      <PenTool className="solid-duo text-grape-fuchsia" />
+                    <div className="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4">
+                      <i className="uil uil-chart-line" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="mb-1">Cool Features & Elements</h4>
-                    <p className="mb-0">Equipped with stunning features and elements for designing appealing pages.</p>
+                    <h4 className="mb-1">تحلیل و گزارش‌گیری</h4>
+                    <p className="mb-0">
+                      گزارشات تفصیلی از عملکرد دانش‌آموزان، اساتید و عملکرد کلی مدرسه
+                    </p>
                   </div>
                 </div>
 
                 <div className="d-flex flex-row">
                   <div>
-                    <div className="svg-bg bg-white rounded-xl shadow-xl me-5">
-                      <Share className="solid-duo text-grape-fuchsia" />
+                    <div className="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4">
+                      <i className="uil uil-mobile-android" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="mb-1">Modern Portfolio Layouts</h4>
+                    <h4 className="mb-1">اپلیکیشن موبایل</h4>
                     <p className="mb-0">
-                      Effortlessly create and maintain a visually stunning and impactful portfolio.
+                      دسترسی کامل از طریق اپلیکیشن موبایل برای والدین، دانش‌آموزان و اساتید
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* ========== feature 2 section ========== */}
-            <div className="row gx-lg-0 gy-10 align-items-center">
-              <div className="col-lg-7 position-relative order-lg-2">
+            <div className="row gx-lg-8 gx-xl-0 gy-10 align-items-center mb-16 mb-md-22">
+              <div className="col-lg-6 offset-xl-1 position-relative order-lg-2">
                 <div
-                  className="position-absolute"
+                  className="shape rounded bg-soft-primary rellax d-block"
                   style={{
                     zIndex: 0,
                     top: "50%",
                     left: "50%",
-                    width: "140%",
-                    height: "auto",
+                    width: "50%",
+                    height: "60%",
                     transform: "translate(-50%,-50%)"
-                  }}>
-                  <img className="w-100" src="/img/photos/blurry.png" alt="" />
-                </div>
+                  }}
+                />
 
-                <figure className="position-relative" style={{ zIndex: 2 }}>
-                  <img src="/img/photos/mi2.png" srcSet="/img/photos/mi2@2x.png 2x" alt="" />
-                </figure>
+                <div className="row gx-md-5 gy-5 position-relative">
+                  <div className="col-5">
+                    <img
+                      alt="امنیت داده"
+                      src="/img/demos/fe5.jpg"
+                      srcSet="/img/demos/fe5@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg my-5 d-flex ms-auto"
+                    />
+                    <img
+                      alt="پشتیبانی"
+                      src="/img/demos/fe6.jpg"
+                      srcSet="/img/demos/fe6@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg d-flex col-10 ms-auto"
+                    />
+                  </div>
+
+                  <div className="col-7">
+                    <img
+                      alt="یکپارچه‌سازی"
+                      src="/img/demos/fe7.jpg"
+                      srcSet="/img/demos/fe7@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg mb-5"
+                    />
+                    <img
+                      alt="تحلیل داده"
+                      src="/img/demos/fe8.jpg"
+                      srcSet="/img/demos/fe8@2x.jpg 2x"
+                      className="img-fluid rounded shadow-lg d-flex col-11"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <div className="col-lg-4 me-auto">
-                <div className="d-flex flex-row mb-6">
+              <div className="col-lg-6 col-xl-5 col-xxl-4 offset-xxl-1">
+                <div className="d-flex flex-row mb-7">
                   <div>
-                    <div className="svg-bg bg-white rounded-xl shadow-xl me-5">
-                      <Devices className="solid-duo text-grape-fuchsia" />
+                    <div className="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4">
+                      <i className="uil uil-shield-check" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="mb-1">Well-Written Code</h4>
-                    <p className="mb-0">Pixel-perfect and easily editable code with comprehensive comments.</p>
+                    <h4 className="mb-1">امنیت و حریم خصوصی</h4>
+                    <p className="mb-0">
+                      حفاظت کامل از اطلاعات با بالاترین استانداردهای امنیتی
+                    </p>
                   </div>
                 </div>
 
-                <div className="d-flex flex-row mb-6">
+                <div className="d-flex flex-row mb-7">
                   <div>
-                    <div className="svg-bg bg-white rounded-xl shadow-xl me-5">
-                      <Safe className="solid-duo text-grape-fuchsia" />
+                    <div className="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4">
+                      <i className="uil uil-cloud-database-tree" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="mb-1">Gorgeous Shop Layouts</h4>
+                    <h4 className="mb-1">پشتیبان‌گیری ابری</h4>
                     <p className="mb-0">
-                      Present your products to your visitors in an efficient and visually appealing manner.
+                      ذخیره‌سازی امن اطلاعات در فضای ابری با دسترسی ۲۴/۷
                     </p>
                   </div>
                 </div>
 
                 <div className="d-flex flex-row">
                   <div>
-                    <div className="svg-bg bg-white rounded-xl shadow-xl me-5">
-                      <GlobeTwo className="solid-duo text-grape-fuchsia" />
+                    <div className="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4">
+                      <i className="uil uil-headphones-alt" />
                     </div>
                   </div>
-
                   <div>
-                    <h4 className="mb-1">Fully Responsive Layouts</h4>
+                    <h4 className="mb-1">پشتیبانی ۲۴/۷</h4>
                     <p className="mb-0">
-                      Adjusts to varying screen sizes, ensuring seamless compatibility across all devices.
+                      تیم پشتیبانی فنی حرفه‌ای آماده کمک به شما در تمام ساعات روز
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="row mb-8 text-center mt-17 mt-md-19 mb-9 mb-md-11">
-              <div className="col-md-11 col-lg-10 col-xl-8 col-xxl-7 mx-auto">
-                <h2 className="display-2 mb-0 px-lg-10 px-xl-0">
-                  Build your website using the powerful features of Sandbox
-                </h2>
+          <div className="overflow-hidden">
+            <div className="divider text-soft-primary mx-n2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path
+                  fill="currentColor"
+                  d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        {/* ========== technology section ========== */}
+        <section className="wrapper bg-gradient-primary">
+          <div className="container pb-14 pb-md-16">
+            <div className="row gx-0 mb-14 mb-md-16">
+              <div className="col-9 col-sm-10 col-lg-9 mx-auto mt-n15 mt-md-n23">
+                <img
+                  alt="تکنولوژی پیشرفته"
+                  src="/img/demos/de1.jpg"
+                  srcSet="/img/demos/de1@2x.jpg 2x"
+                  className="img-fluid mx-auto rounded shadow-lg"
+                />
+                <img
+                  alt="ابری"
+                  src="/img/demos/de2.jpg"
+                  srcSet="/img/demos/de2@2x.jpg 2x"
+                  className="position-absolute rounded shadow-lg"
+                  style={{ top: "25%", right: "-12%", maxWidth: "30%", height: "auto" }}
+                />
+                <img
+                  alt="موبایل"
+                  src="/img/demos/de3.jpg"
+                  srcSet="/img/demos/de3@2x.jpg 2x"
+                  className="position-absolute rounded shadow-lg"
+                  style={{ top: "15%", left: "-15%", maxWidth: "30%", height: "auto" }}
+                />
+                <img
+                  alt="تبلت"
+                  src="/img/demos/de4.jpg"
+                  srcSet="/img/demos/de4@2x.jpg 2x"
+                  className="position-absolute rounded shadow-lg"
+                  style={{ bottom: "15%", left: "-13%", maxWidth: "30%", height: "auto" }}
+                />
               </div>
             </div>
-          </div>
 
-          {/* ========== demos carousel section ========== */}
-          <div className="container-fluid px-xl-0 pb-16 pb-md-18">
-            <div className="swiper-container swiper-auto">
-              <Carousel
-                loop
-                grabCursor
-                spaceBetween={40}
-                pagination={false}
-                navigation={false}
-                slidesPerView="auto"
-                className="overflow-visible">
-                {[1, 2, 3, 4, 5, 6].map((item) => (
-                  <figure className="rounded-xl shadow-xl" key={item}>
-                    <img src={`/img/photos/bp${item}.jpg`} srcSet={`/img/photos/bp${item}@2x.jpg 2x`} alt="" />
-                  </figure>
-                ))}
-              </Carousel>
-            </div>
-          </div>
-
-          {/* ========== tools & reviews section ========== */}
-          <div className="container pb-6 pb-md-8">
-            {/* ========== used technology section ========== */}
-            <div className="row row-cols-2 row-cols-md-4 row-cols-lg-5 gx-md-8 gy-10 text-center justify-content-center pb-16 pb-md-18">
+            <div className="row row-cols-2 row-cols-md-4 row-cols-lg-5 gx-md-8 gy-10 text-center justify-content-center">
               <div className="col">
                 <img className="mb-4" src="/img/svg/next.js-circle.svg" alt="" />
                 <h4>
-                  Built with Next.js <br /> & React
+                  ساخته شده با <br /> Next.js و React
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi1.png" srcSet="/img/demos/fi1@2x.png 2x" alt="" />
                 <h4>
-                  Bootstrap 5 <br /> & Sass
+                  طراحی <br /> ریسپانسیو
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/svg/typescript.svg" alt="" />
                 <h4>
-                  Typescript <br /> Clean & Organized
+                  کد تمیز <br /> و سازمان‌یافته
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi11.png" srcSet="/img/demos/fi11@2x.png 2x" alt="" />
                 <h4>
-                  Server side <br /> Rendered
+                  رندر سمت <br /> سرور
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi2.png" srcSet="/img/demos/fi2@2x.png 2x" alt="" />
                 <h4>
-                  SEO-friendly <br /> Coding
+                  بهینه‌سازی <br /> برای SEO
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi4.png" srcSet="/img/demos/fi4@2x.png 2x" alt="" />
                 <h4>
-                  Retina-ready <br /> Graphics
+                  گرافیک <br /> با کیفیت
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi5.png" srcSet="/img/demos/fi5@2x.png 2x" alt="" />
                 <h4>
-                  One-page <br /> Layout Option
+                  طراحی <br /> یکپارچه
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi6.png" srcSet="/img/demos/fi6@2x.png 2x" alt="" />
                 <h4>
-                  Isotope <br /> Filterable Gallery
+                  گالری <br /> تصاویر
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi8.png" srcSet="/img/demos/fi8@2x.png 2x" alt="" />
                 <h4>
-                  Contact Form <br /> w/o Page Refresh
+                  فرم تماس <br /> هوشمند
                 </h4>
               </div>
 
               <div className="col">
                 <img className="mb-4" src="/img/demos/fi10.png" srcSet="/img/demos/fi10@2x.png 2x" alt="" />
                 <h4>
-                  Top-Notch Support <br /> & Free Updates
+                  پشتیبانی حرفه‌ای <br /> و به‌روزرسانی رایگان
                 </h4>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* ========== client reviews section ========== */}
-            <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-              <div className="col-lg-7 position-relative">
-                <div
-                  className="position-absolute"
-                  style={{
-                    // zIndex: 0,
-                    top: "50%",
-                    left: "50%",
-                    width: "130%",
-                    height: "auto",
-                    transform: "translate(-50%,-50%)"
-                  }}>
-                  <img className="w-100" src="/img/photos/blurry.png" alt="" />
-                </div>
+        {/* ========== inner page section ========== */}
+        <section className="wrapper bg-gradient-reverse-primary">
+          <div className="container pb-10 pb-md-13">
+            <div className="row mb-8 text-center">
+              <div className="col-lg-8 col-xl-7 mx-auto">
+                <h2 className="fs-15 ls-xl text-uppercase text-muted">صفحات نمونه</h2>
+                <h2 className="display-3 mt-3 mb-3 mb-0">
+                  صفحات طراحی شده با دقت برای انتخاب شما
+                </h2>
+              </div>
+            </div>
 
-                <div className="row gx-md-5 gy-5">
-                  <div className="col-md-6 col-xl-5 align-self-end">
-                    <div className="card shadow-xl rounded-xl">
-                      <div className="card-body">
-                        <blockquote className="icon mb-0">
-                          <p>
-                            “Sandbox is really attractive and it saves my time. The support team is really amazing.”
-                          </p>
-                          <div className="blockquote-details">
-                            <div className="info p-0">
-                              <h5 className="mb-0">stevenstrange</h5>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
+            <Projects />
 
-                  <div className="col-md-6 align-self-end">
-                    <div className="card shadow-xl rounded-xl">
-                      <div className="card-body">
-                        <blockquote className="icon mb-0">
-                          <p>
-                            “This is just next level stuff in terms of quality, docs and features. I don't think I'm
-                            going to need or tolerate any other template from now on.”
-                          </p>
-                          <div className="blockquote-details">
-                            <div className="info p-0">
-                              <h5 className="mb-0">70656e6973</h5>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
+            <div className="mb-15" />
+          </div>
 
-                  <div className="col-md-6 col-xl-5 offset-xl-1">
-                    <div className="card shadow-xl rounded-xl">
-                      <div className="card-body">
-                        <blockquote className="icon mb-0">
-                          <p>
-                            “I've been a Themeforest user for almost 10 years and I have purchased well over 100 themes
-                            during my time. This theme is amongst the best here.”
-                          </p>
-                          <div className="blockquote-details">
-                            <div className="info p-0">
-                              <h5 className="mb-0">bmwe92m3</h5>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
+          <div className="overflow-hidden">
+            <div className="divider text-light mx-n2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path
+                  fill="currentColor"
+                  d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
 
-                  <div className="col-md-6 align-self-start">
-                    <div className="card shadow-xl rounded-xl">
-                      <div className="card-body">
-                        <blockquote className="icon mb-0">
-                          <p>
-                            “Simply the best templates that I have bought so far. Super clean code, intuitive
-                            documentations, and most important of all the best design.”
-                          </p>
-                          <div className="blockquote-details">
-                            <div className="info p-0">
-                              <h5 className="mb-0">oziuji</h5>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
+        {/* ========== responsive section ========== */}
+        <section className="wrapper bg-light">
+          <div className="container pt-lg-20 pb-18 pb-xxl-20 position-relative">
+            <img
+              alt="دستگاه‌های مختلف"
+              data-cue="fadeIn"
+              src="/img/demos/devices.png"
+              srcSet="/img/demos/devices@2x.png 2x"
+              className="position-lg-absolute col-12 col-lg-12 mt-xxl-n3 mb-3 mb-md-10 mb-lg-0"
+              style={{ top: 0, left: "-23%" }}
+            />
+
+            <div className="row gx-lg-8 gx-xl-12 mt-lg-n16 mt-xl-n12 mt-xxl-0 align-items-xxl-center">
+              <div className="col-md-10 offset-md-1 col-lg-6 offset-lg-6 text-center text-lg-start">
+                <div className="ps-xl-1 ps-xxl-5 pe-xxl-10">
+                  <h2 className="fs-15 ls-xl text-uppercase text-muted mb-3">کاملاً ریسپانسیو</h2>
+                  <h3 className="display-3 mb-5">تصاویر و متون ریسپانسیو در تمام اندازه‌های صفحه</h3>
+                  <p className="lead mb-8">
+                    نرم‌افزار مدرسه آنلاین پارس آ موز ریسپانسیو است و طرح‌بندی آن با اندازه‌های مختلف صفحه سازگار است که باعث می‌شود وب‌سایت شما با هر دستگاهی مانند گوشی‌های هوشمند، تبلت و کامپیوتر سازگار باشد.
+                  </p>
+
+                  <img
+                    src="/img/demos/qrcode.jpg"
+                    srcSet="/img/demos/qrcode@2x.jpg 2x"
+                    className="shadow-lg rounded"
+                    alt="QR کد"
+                  />
                 </div>
               </div>
-              <div className="col-lg-4">
-                <h2 className="display-2 mb-4 mt-lg-n6">Our top priority is ensuring customer satisfaction.</h2>
-                <p className="lead fs-22 mb-6">Don't take our word for it. Hear from customers about Sandbox.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ========== call to action section ========== */}
+        <section className="wrapper bg-gradient-reverse-primary" id="contact">
+          <div className="container pt-xl-10 text-center">
+            <div className="row">
+              <div className="col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                <img src="/img/demos/icon.png" srcSet="/img/demos/icon@2x.png 2x" alt="آیکون" />
+                <h2 className="display-3 mt-3 mb-3 px-lg-8">
+                  فکر کنید منحصر به فرد و خلاق باشید. با نرم‌افزار مدرسه آنلاین پارس آ موز تفاوت ایجاد کنید.
+                </h2>
+
+                <p className="lead fs-lg mb-6">
+                  همه چیزهایی که برای ایجاد وب‌سایت منحصر به فرد و حرفه‌ای بعدی خود نیاز دارید، شامل بلوک‌ها و صفحات چشمگیر و آماده.
+                </p>
                 <a
-                  href="https://1.envato.market/Rygn0y"
-                  className="btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl"
-                  target="_blank">
-                  All Reviews <i className="uil uil-arrow-up-right"></i>
+                  href="tel:+989120000000"
+                  className="btn btn-lg btn-primary rounded-pill mb-10">
+                  تماس با ما
                 </a>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* ========== think unique and make section ========== */}
-        <section className="wrapper overflow-hidden">
-          <div className="container pt-16 pt-md-18 text-center position-relative">
-            <div className="position-absolute" style={{ top: "-7%", left: "50%", transform: "translateX(-50%)" }}>
-              <img src="/img/photos/blurry.png" alt="" />
-            </div>
-
-            <div className="row position-relative mb-9 mb-md-11">
-              <div className="col-lg-10 col-xl-9 col-xxl-7 mx-auto">
-                <div>
-                  <img src="/img/demos/icon-grape.png" srcSet="/img/demos/icon-grape@2x.png 2x" alt="" />
-                  <h1 className="display-1 fs-64 mt-5 mb-5">Think unique and make a difference with Sandbox.</h1>
-                  <p className="lead fs-24 mb-8 px-lg-12 px-xl-14 px-xxl-10">
-                    We are trusted by thousands of clients. Join them now and easily create your stunning website in no
-                    time.
-                  </p>
-                </div>
-
-                <div className="d-flex justify-content-center">
-                  <span>
-                    <a
-                      href="https://cutt.ly/P4rW6e4"
-                      className="btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl"
-                      target="_blank">
-                      Buy Sandbox <i className="uil uil-arrow-up-right" />
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="container text-center">
-            <img
-              alt=""
-              src="/img/demos/f1.png"
-              srcSet="/img/demos/f1@2x.png 2x"
-              className="img-fluid position-relative"
-              style={{ zIndex: 2 }}
-            />
+            <img className="img-fluid" src="/img/demos/f1.png" srcSet="/img/demos/f1@2x.png 2x" alt="تصویر نهایی" />
           </div>
         </section>
       </main>
+
+      {/* ========== footer section ========== */}
+      <Footer8 />
     </Fragment>
   );
 }
