@@ -13,7 +13,7 @@ export default function Team9() {
             <h2 className="fs-16 text-uppercase text-primary mb-3">Our Team</h2>
 
             <h3 className="display-3 px-lg-18 px-xl-12 px-xxl-15 mb-6">
-              Save your time and money by choosing our professional team.
+              Save your time and money by choosing2ewreww our professional team.
             </h3>
 
             <p className="mb-8 px-lg-10 px-xl-0">

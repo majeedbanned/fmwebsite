@@ -6,7 +6,7 @@ export default function Facts13() {
           <div className="col-lg-7 text-center text-lg-start">
             <h2 className="fs-16 text-uppercase text-muted mb-3">Save Time and Money</h2>
             <h3 className="display-3 mb-0 pe-xl-10 pe-xxl-15">
-              Save your time and money by choosing our <span className="underline-3 style-2 yellow">professional</span>{" "}
+              Save your time and money by choosingkkk our <span className="underline-3 style-2 yellow">professional</span>{" "}
               team.
             </h3>
           </div>

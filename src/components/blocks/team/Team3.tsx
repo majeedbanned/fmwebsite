@@ -18,7 +18,7 @@ export default function Team3() {
         <div className="row mb-3">
           <div className="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
             <Team className="icon-svg-md mb-4" />
-            <h2 className="display-4 mb-3 px-lg-14">Save your time and money by choosing our professional team.</h2>
+            <h2 className="display-4 mb-3 px-lg-14">Save jjjyour time and money by choosing our professional team.</h2>
           </div>
         </div>
 

@@ -68,7 +68,7 @@ export default function NavbarOne({
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
         <div className="offcanvas-header d-lg-none">
-          <h3 className="text-white fs-30 mb-0">Sandbox</h3>
+          <h3 className="text-white fs-30 mb-0" style={{ fontFamily: "'IRANYekanX', 'Arial', sans-serif" }}>پارس آ موز</h3>
           <button
             type="button"
             aria-label="Close"
@@ -78,33 +78,96 @@ export default function NavbarOne({
         </div>
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-          <ul className="navbar-nav">
-            {/* ===================== demos nav item ===================== */}
-            <DemosNavItem />
+          <ul className="navbar-nav" style={{ fontFamily: "'IRANYekanX', 'Arial', sans-serif", direction: 'rtl' }}>
+            {/* ===================== services nav item ===================== */}
+            <li className="nav-item dropdown">
+              <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">خدمات</a>
+              <ul className="dropdown-menu">
+                <li className="dropdown dropdown-submenu dropend">
+                  <a href="#" className="dropdown-item dropdown-toggle">سیستم‌های مدیریت</a>
+                  <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="/initiation">مدیریت پایه</a></li>
+                    <li><a className="dropdown-item" href="/dashboard">داشبورد هوشمند</a></li>
+                  </ul>
+                </li>
+                <li className="dropdown dropdown-submenu dropend">
+                  <a href="#" className="dropdown-item dropdown-toggle">ارزیابی و آزمون</a>
+                  <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="/onlineexam">آزمون آنلاین</a></li>
+                    <li><a className="dropdown-item" href="/questionbank">بانک سوالات</a></li>
+                    <li><a className="dropdown-item" href="/gradingsystem">نمره‌دهی</a></li>
+                  </ul>
+                </li>
+                <li className="dropdown dropdown-submenu dropend">
+                  <a href="#" className="dropdown-item dropdown-toggle">ارتباطات</a>
+                  <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="/communications">پیام‌رسانی</a></li>
+                    <li><a className="dropdown-item" href="/mychat">چت مدرسه</a></li>
+                    <li><a className="dropdown-item" href="/agenda">تقویم و رویدادها</a></li>
+                  </ul>
+                </li>
+                <li className="dropdown dropdown-submenu dropend">
+                  <a href="#" className="dropdown-item dropdown-toggle">گزارشات و ابزارها</a>
+                  <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="/classsheet">گزارش کلاسی</a></li>
+                    <li><a className="dropdown-item" href="/monthlygrade">نمرات ماهانه</a></li>
+                    <li><a className="dropdown-item" href="/tactivities">فعالیت‌های معلمان</a></li>
+                    <li><a className="dropdown-item" href="/accounting">حسابداری</a></li>
+                    <li><a className="dropdown-item" href="/fileexplorer">فایل اکسپلورر</a></li>
+                  </ul>
+                </li>
+                <li><hr className="dropdown-divider" /></li>
+                <li><a className="dropdown-item" href="/services-2">همه خدمات</a></li>
+              </ul>
+            </li>
 
-            {/*  ===================== pages nav item  ===================== */}
-            <PagesNavItem />
+            {/* ===================== about nav item ===================== */}
+            <li className="nav-item dropdown">
+              <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">درباره ما</a>
+              <ul className="dropdown-menu">
+                <li><a className="dropdown-item" href="/about-us">درباره پارس آ موز</a></li>
+                <li><a className="dropdown-item" href="/our-team">تیم ما</a></li>
+                <li><a className="dropdown-item" href="/our-story">داستان ما</a></li>
+                <li><a className="dropdown-item" href="/careers">فرصت‌های شغلی</a></li>
+              </ul>
+            </li>
 
-            {/* ===================== projects nav item  ===================== */}
-            <ProjectsNavItem />
+            {/* ===================== solutions nav item ===================== */}
+            <li className="nav-item dropdown">
+              <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">راه‌حل‌ها</a>
+              <ul className="dropdown-menu">
+                <li><a className="dropdown-item" href="/pricing">تعرفه‌ها</a></li>
+                <li><a className="dropdown-item" href="/demo">درخواست دمو</a></li>
+                <li><a className="dropdown-item" href="/case-studies">مطالعات موردی</a></li>
+                <li><a className="dropdown-item" href="/integrations">یکپارچه‌سازی</a></li>
+              </ul>
+            </li>
+
+            {/* ===================== support nav item ===================== */}
+            <li className="nav-item dropdown">
+              <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">پشتیبانی</a>
+              <ul className="dropdown-menu">
+                <li><a className="dropdown-item" href="/help-center">مرکز راهنمایی</a></li>
+                <li><a className="dropdown-item" href="/documentation">مستندات</a></li>
+                <li><a className="dropdown-item" href="/tutorials">آموزش‌ها</a></li>
+                <li><a className="dropdown-item" href="/contact">تماس با ما</a></li>
+              </ul>
+            </li>
 
             {/* ===================== blog nav item ===================== */}
-            <BlogNavItem />
-
-            {/* ===================== blocks nav item ===================== */}
-            <BlocksNavItem />
-
-            {/* ===================== documentation nav item ===================== */}
-            <DocumentationNavItem />
+            <li className="nav-item">
+              <a href="/blog" className="nav-link">وبلاگ</a>
+            </li>
           </ul>
 
           {/* ============= show contact info in the small device sidebar ============= */}
-          <div className="offcanvas-footer d-lg-none">
+          <div className="offcanvas-footer d-lg-none" style={{ fontFamily: "'IRANYekanX', 'Arial', sans-serif", direction: 'rtl' }}>
             <div>
-              <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
+              <NextLink title="info@parsamooz.com" className="link-inverse" href="mailto:info@parsamooz.com" />
               <br />
-              <NextLink href="tel:0123456789" title="00 (123) 456 78 90" />
+              <NextLink href="tel:+982122334455" title="۰۲۱-۲۲۳۳۴۴۵۵" />
               <br />
+              <p className="text-white small mb-2">پشتیبانی ۲۴ ساعته</p>
               <SocialLinks />
             </div>
           </div>
