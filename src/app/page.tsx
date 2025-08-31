@@ -1,14 +1,15 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 // GLOBAL CUSTOM COMPONENTS
 import Tooltip from "components/Tooltip";
 import Navbar from "components/blocks/navbar/navbar-1";
-import { Hero36 } from "components/blocks/hero";
+import Hero36 from "components/blocks/hero/Hero36";
 import { Facts21 } from "components/blocks/facts";
 import { Footer8 } from "components/blocks/footer";
 import CountUp from "components/reuseable/CountUp";
 import NextLink from "components/reuseable/links/NextLink";
+import ContactPopup from "components/ContactPopup";
 import Projects from "./projects";
 
 // Define custom font style
@@ -19,6 +20,23 @@ const yekanFont = {
 };
 
 export default function Demo36() {
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+  const [popupType, setPopupType] = useState<"contact" | "demo">("contact");
+
+  const openContactPopup = () => {
+    setPopupType("contact");
+    setIsContactPopupOpen(true);
+  };
+
+  const openDemoPopup = () => {
+    setPopupType("demo");
+    setIsContactPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsContactPopupOpen(false);
+  };
+
   return (
     <Fragment>
       <style jsx global>{`
@@ -106,11 +124,11 @@ export default function Demo36() {
                 className="btn btn-outline-primary rounded-pill rtl-content">
                 خدمات ما
               </a>
-              <a
-                href="#contact"
+              <button
+                onClick={openContactPopup}
                 className="btn btn-primary rounded-pill rtl-content">
                 تماس با ما
-              </a>
+              </button>
             </div>
           }
         />
@@ -118,7 +136,7 @@ export default function Demo36() {
 
       <main className="content-wrapper rtl-content">
         {/* ========== hero section ========== */}
-        <Hero36 />
+        <Hero36 onDemoClick={openDemoPopup} />
 
         {/* ========== services navigation menu ========== */}
         <section className="wrapper bg-gradient-primary">
@@ -1103,11 +1121,11 @@ export default function Demo36() {
                 <p className="lead fs-lg mb-6">
                   همه چیزهایی که برای ایجاد وب‌سایت منحصر به فرد و حرفه‌ای بعدی خود نیاز دارید، شامل بلوک‌ها و صفحات چشمگیر و آماده.
                 </p>
-                <a
-                  href="tel:+989120000000"
+                <button
+                  onClick={openContactPopup}
                   className="btn btn-lg btn-primary rounded-pill mb-10">
                   تماس با ما
-                </a>
+                </button>
               </div>
             </div>
 
@@ -1118,6 +1136,13 @@ export default function Demo36() {
 
       {/* ========== footer section ========== */}
       <Footer8 />
+      
+      {/* ========== contact popup ========== */}
+      <ContactPopup 
+        isOpen={isContactPopupOpen}
+        onClose={closePopup}
+        type={popupType}
+      />
     </Fragment>
   );
 }

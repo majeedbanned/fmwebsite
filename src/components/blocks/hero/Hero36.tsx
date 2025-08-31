@@ -4,7 +4,11 @@ import Typewriter from "typewriter-effect";
 // CUSTOM UTILS
 import { fadeInAnimate, slideInDownAnimate } from "utils/animation";
 
-export default function Hero36() {
+interface Hero36Props {
+  onDemoClick?: () => void;
+}
+
+export default function Hero36({ onDemoClick }: Hero36Props) {
   return (
     <section className="wrapper bg-gradient-primary">
       <style jsx>{`
@@ -49,9 +53,12 @@ export default function Hero36() {
               <a className="btn btn-lg btn-primary rounded-pill me-2 scroll" href="#features">
                 مشاهده امکانات
               </a>
-              <a className="btn btn-lg btn-outline-primary rounded-pill" href="#contact">
+              <button 
+                className="btn btn-lg btn-outline-primary rounded-pill"
+                onClick={onDemoClick}
+              >
                 درخواست دمو
-              </a>
+              </button>
             </div>
           </div>
 
