@@ -13,7 +13,7 @@ export default function Team2() {
       <div className="col-lg-4">
         <h2 className="fs-15 text-uppercase text-muted mb-3">Meet the Team</h2>
         <h3 className="display-5 mb-5">
-          Save your time and money by choosing our professional team.
+          fffffour professional team.
         </h3>
         <p>
           Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur

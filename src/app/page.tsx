@@ -125,8 +125,8 @@ export default function Demo36() {
           <div className="container py-8">
             <div className="row text-center mb-6">
               <div className="col-lg-10 mx-auto">
-                <h3 className="display-6 text-white mb-3">دسترسی سریع به خدمات</h3>
-                <p className="lead text-white opacity-90">با یک کلیک به تمام سرویس‌های مدرسه آنلاین دسترسی داشته باشید</p>
+                <h3 className="display-6 text-gray-600 mb-3">دسترسی سریع به خدمات</h3>
+                <p className="lead text-gray-600 opacity-90">با یک کلیک به تمام سرویس‌های مدرسه آنلاین دسترسی داشته باشید</p>
               </div>
             </div>
             
@@ -539,7 +539,7 @@ export default function Demo36() {
                           </li>
                           <li className="col-md-6">
                             <i className="uil uil-check" />
-                            <span>چت مدرسه</span>
+                            <span className="text-gray-600">چت مدرسه</span>
                           </li>
                         </ul>
 
@@ -583,8 +583,8 @@ export default function Demo36() {
             <div className="row text-center mb-12">
               <div className="col-lg-8 mx-auto">
                 <h2 className="fs-15 text-uppercase text-line text-white mb-3">نظام جامع آموزش</h2>
-                <h3 className="display-4 text-white mb-5">راه‌حل کامل مدیریت مدرسه دیجیتال</h3>
-                <p className="lead text-white opacity-90">
+                <h3 className="display-4 text-gray-600 mb-5 text-gray-600">راه‌حل کامل مدیریت مدرسه دیجیتال</h3>
+                <p className="lead text-gray-600 opacity-90">
                   سیستم پارس آ موز با بیش از ۱۴ سرویس تخصصی، تمام نیازهای مدیریتی، آموزشی و اداری مدارس مدرن را پوشش می‌دهد
                 </p>
               </div>
@@ -602,8 +602,8 @@ export default function Demo36() {
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-white mb-2">هوش مصنوعی</h4>
-                        <p className="text-white opacity-80 mb-0">تحلیل‌های هوشمند و پیش‌بینی عملکرد دانش‌آموزان</p>
+                        <h4 className="text-gray-600 mb-2">هوش مصنوعی</h4>
+                        <p className="text-gray-600 opacity-80 mb-0">تحلیل‌های هوشمند و پیش‌بینی عملکرد دانش‌آموزان</p>
                       </div>
                     </div>
                   </div>
@@ -615,8 +615,8 @@ export default function Demo36() {
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-white mb-2">پلتفرم ابری</h4>
-                        <p className="text-white opacity-80 mb-0">دسترسی از هر مکان و در هر زمان بدون نیاز به نصب</p>
+                        <h4 className="text-gray-600 mb-2">پلتفرم ابری</h4>
+                        <p className="text-gray-600 opacity-80 mb-0">دسترسی از هر مکان و در هر زمان بدون نیاز به نصب</p>
                       </div>
                     </div>
                   </div>
@@ -628,8 +628,8 @@ export default function Demo36() {
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-white mb-2">امنیت بالا</h4>
-                        <p className="text-white opacity-80 mb-0">رمزنگاری کامل و پشتیبان‌گیری خودکار اطلاعات</p>
+                        <h4 className="text-gray-600 mb-2">امنیت بالا</h4>
+                        <p className="text-gray-600 opacity-80 mb-0">رمزنگاری کامل و پشتیبان‌گیری خودکار اطلاعات</p>
                       </div>
                     </div>
                   </div>
@@ -641,8 +641,8 @@ export default function Demo36() {
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-white mb-2">اپلیکیشن موبایل</h4>
-                        <p className="text-white opacity-80 mb-0">دسترسی کامل از طریق اپ اختصاصی iOS و Android</p>
+                        <h4 className="text-gray-600 mb-2">اپلیکیشن موبایل</h4>
+                        <p className="text-gray-600 opacity-80 mb-0">دسترسی کامل از طریق اپ اختصاصی iOS و Android</p>
                       </div>
                     </div>
                   </div>

@@ -26,7 +26,7 @@ export default function Hero36() {
       <div className="container pt-10 pt-md-14">
         <div className="row gx-2 gy-10 align-items-center">
           <div className="col-md-10 offset-md-1 offset-lg-0 col-lg-5 text-center text-lg-start order-2 order-lg-0 hero-content">
-            <h1 className="display-1 mb-5 mx-md-10 mx-lg-0" style={slideInDownAnimate("600ms")}>
+            <h1 className="display-1 mb-5 mx-md-10 mx-lg-0 text-left" style={slideInDownAnimate("600ms")}>
               سیستم مدیریت مدرسه آنلاین قدرتمند و ساده برای <br />
               <span className="typer text-primary text-nowrap">
                 <Typewriter
@@ -39,7 +39,7 @@ export default function Hero36() {
               </span>
             </h1>
 
-            <p className="lead fs-23 mb-7" style={slideInDownAnimate("900ms")}>
+            <p className="lead fs-23 mb-7 text-left" style={slideInDownAnimate("900ms")}>
               سیستم جامع مدیریت مدرسه با امکانات پیشرفته، رابط کاربری ساده و پشتیبانی ۲۴ ساعته
             </p>
 

@@ -70,17 +70,17 @@ export default function Projects() {
       <div data-cue="fadeIn">
         <div className="row gx-md-8 gx-xl-9 gy-8 gy-xl-9 isotope">
           {schoolServices.map(({ category, id, image, title, link, description }) => (
-            <div className={`project item col-md-6 col-xl-4 ${category}`} key={id}>
-              <figure className="itooltip itooltip-primary rounded shadow-lg" title={description}>
+            <div className={`project item col-md-6 text-gray-600 col-xl-4 ${category}`} key={id}>
+              <figure className="itooltip itooltip-primary rounded shadow-lg text-gray-600" title={description}>
                 <Link href={link}>
                   <img src={`/img/demos/${image}.jpg`} srcSet={`/img/demos/${image}@2x.jpg 2x`} alt={title} />
-                  <div className="overlay bg-gradient-primary" style={{ opacity: 0.95 }}>
+                  <div className=" bg-gradient-primary" style={{ opacity: 0.95 }}>
                     <div className="d-flex align-items-center justify-content-center h-100 p-4">
-                      <div className="text-center text-white">
-                        <h5 className="mb-3 fw-bold">{title}</h5>
-                        <p className="mb-3 fs-14 text-white opacity-90">{description}</p>
-                        <span className="btn btn-sm btn-white rounded-pill px-4">
-                          <i className="uil uil-arrow-left me-1"></i>
+                      <div className="text-center text-gray-600">
+                        <h5 className="mb-3 fw-bold text-gray-600" style={{ color: '#343f52 !important' }}>{title}</h5>
+                        <p className="mb-3 fs-14 text-gray-600 opacity-90">{description}</p>
+                        <span className="btn btn-sm btn-gray-600 rounded-pill px-4">
+                          <i className="uil uil-arrow-left me-1 text-gray-600"></i>
                           مشاهده سرویس
                         </span>
                       </div>
