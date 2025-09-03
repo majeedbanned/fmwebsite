@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Slack webhook URL - you'll need to set this in environment variables
-    const slackWebhookUrl = "https://hooks.slack.com/services/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";
+    const slackWebhookUrl = "https://hooks.slack.com/services/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";
     
     if (!slackWebhookUrl) {
       console.error("SLACK_WEBHOOK_URL not configured");
@@ -121,7 +121,7 @@ export async function POST(request: NextRequest) {
       console.error("Failed to send Slack notification:", slackResponse.statusText);
       return NextResponse.json(
         { error: "خطا در ارسال اطلاعات" },
-        { status: 500 }
+        { status: 508 }
       );
     }
 
@@ -141,3 +141,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
