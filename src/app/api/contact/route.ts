@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Slack webhook URL - you'll need to set this in environment variables
-    const slackWebhookUrl = "https://hooks.slack.com/services/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";
+    const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
     
     if (!slackWebhookUrl) {
       console.error("SLACK_WEBHOOK_URL not configured");
