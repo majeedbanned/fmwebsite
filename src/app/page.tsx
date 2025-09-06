@@ -1076,7 +1076,7 @@ export default function Demo36() {
         </section>
 
         {/* ========== responsive section ========== */}
-        <section className="wrapper bg-light">
+        {/* <section className="wrapper bg-light">
           <div className="container pt-lg-20 pb-18 pb-xxl-20 position-relative">
             <img
               alt="دستگاه‌های مختلف"
@@ -1106,7 +1106,7 @@ export default function Demo36() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ========== call to action section ========== */}
         <section className="wrapper bg-gradient-reverse-primary" id="contact">
