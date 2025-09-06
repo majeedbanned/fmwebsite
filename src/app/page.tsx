@@ -1129,7 +1129,7 @@ export default function Demo36() {
               </div>
             </div>
 
-            <img className="img-fluid" src="/img/demos/f1.png" srcSet="/img/demos/f1@2x.png 2x" alt="تصویر نهایی" />
+            
           </div>
         </section>
       </main>
