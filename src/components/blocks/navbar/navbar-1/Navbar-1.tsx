@@ -86,24 +86,24 @@ export default function NavbarOne({
                 <li className="dropdown dropdown-submenu dropend">
                   <a href="#" className="dropdown-item dropdown-toggle" style={{ textAlign: 'right' }}>سیستم‌های مدیریت</a>
                   <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
-                    <li><a className="dropdown-item" href="/initiation" style={{ textAlign: 'right' }}>مدیریت پایه</a></li>
-                    <li><a className="dropdown-item" href="/dashboard" style={{ textAlign: 'right' }}>داشبورد هوشمند</a></li>
+                    <li><a className="dropdown-item" href="/initiation" style={{ textAlign: 'right' }} title="سیستم مدیریت پایه مدرسه - ثبت نام، مدیریت دانش آموزان و معلمان" aria-label="سیستم مدیریت پایه مدرسه">مدیریت پایه</a></li>
+                    <li><a className="dropdown-item" href="/dashboard" style={{ textAlign: 'right' }} title="داشبورد هوشمند مدیریت مدرسه - آمار و گزارشات جامع" aria-label="داشبورد هوشمند مدیریت مدرسه">داشبورد هوشمند</a></li>
                   </ul>
                 </li>
                 <li className="dropdown dropdown-submenu dropend">
                   <a href="#" className="dropdown-item dropdown-toggle" style={{ textAlign: 'right' }}>ارزیابی و آزمون</a>
                   <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
-                    <li><a className="dropdown-item" href="/onlineexam" style={{ textAlign: 'right' }}>آزمون آنلاین</a></li>
-                    <li><a className="dropdown-item" href="/questionbank" style={{ textAlign: 'right' }}>بانک سوالات</a></li>
-                    <li><a className="dropdown-item" href="/gradingsystem" style={{ textAlign: 'right' }}>نمره‌دهی</a></li>
+                    <li><a className="dropdown-item" href="/onlineexam" style={{ textAlign: 'right' }} title="سیستم آزمون آنلاین - برگزاری آزمون دیجیتال و ارزیابی خودکار" aria-label="سیستم آزمون آنلاین">آزمون آنلاین</a></li>
+                    <li><a className="dropdown-item" href="/questionbank" style={{ textAlign: 'right' }} title="بانک سوالات آزمون - مخزن سوالات تخصصی برای تمام دروس" aria-label="بانک سوالات آزمون">بانک سوالات</a></li>
+                    <li><a className="dropdown-item" href="/gradingsystem" style={{ textAlign: 'right' }} title="سیستم نمره دهی هوشمند - محاسبه و ثبت نمرات خودکار" aria-label="سیستم نمره دهی هوشمند">نمره‌دهی</a></li>
                   </ul>
                 </li>
                 <li className="dropdown dropdown-submenu dropend">
                   <a href="#" className="dropdown-item dropdown-toggle" style={{ textAlign: 'right' }}>ارتباطات</a>
                   <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
-                    <li><a className="dropdown-item" href="/communications" style={{ textAlign: 'right' }}>پیام‌رسانی</a></li>
-                    <li><a className="dropdown-item" href="/mychat" style={{ textAlign: 'right' }}>چت مدرسه</a></li>
-                    <li><a className="dropdown-item" href="/agenda" style={{ textAlign: 'right' }}>تقویم و رویدادها</a></li>
+                    <li><a className="dropdown-item" href="/communications" style={{ textAlign: 'right' }} title="سیستم پیام رسانی مدرسه - ارسال پیامک انبوه و اطلاع رسانی" aria-label="سیستم پیام رسانی مدرسه">پیام‌رسانی</a></li>
+                    <li><a className="dropdown-item" href="/mychat" style={{ textAlign: 'right' }} title="چت آنلاین مدرسه - ارتباط فوری بین معلمان، دانش آموزان و والدین" aria-label="چت آنلاین مدرسه">چت مدرسه</a></li>
+                    <li><a className="dropdown-item" href="/agenda" style={{ textAlign: 'right' }} title="تقویم مدرسه و مدیریت رویدادها - برنامه ریزی و یادآوری هوشمند" aria-label="تقویم مدرسه و مدیریت رویدادها">تقویم و رویدادها</a></li>
                   </ul>
                 </li>
                 <li className="dropdown dropdown-submenu dropend">

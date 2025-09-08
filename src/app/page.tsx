@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, useState } from "react";
+import type { Metadata } from "next";
 // GLOBAL CUSTOM COMPONENTS
 import Tooltip from "components/Tooltip";
 import Navbar from "components/blocks/navbar/navbar-1";
@@ -11,6 +12,48 @@ import CountUp from "components/reuseable/CountUp";
 import NextLink from "components/reuseable/links/NextLink";
 import ContactPopup from "components/ContactPopup";
 import Projects from "./projects";
+
+export const metadata: Metadata = {
+  title: "پارس آموز - سیستم مدیریت مدرسه آنلاین | نرم افزار مدرسه",
+  description: "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران با ۱۴+ سرویس تخصصی: آزمون آنلاین، مدیریت دانش‌آموزان، حسابداری، چت مدرسه و بیشتر. دمو رایگان دریافت کنید.",
+  keywords: [
+    "سیستم مدیریت مدرسه آنلاین",
+    "نرم افزار مدرسه",
+    "آزمون آنلاین",
+    "پارس آموز",
+    "مدیریت دانش آموزان",
+    "حسابداری مدرسه",
+    "بانک سوالات",
+    "کارنامه آنلاین",
+    "چت مدرسه",
+    "تقویم مدرسه",
+    "سیستم نمره دهی",
+    "مدیریت معلمان",
+    "داشبورد مدرسه"
+  ],
+  openGraph: {
+    title: "پارس آموز - سیستم مدیریت مدرسه آنلاین",
+    description: "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران با ۱۴+ سرویس تخصصی",
+    url: "https://parsamooz.com",
+    images: [
+      {
+        url: "/img/demos/vc1@2x.jpg",
+        width: 1200,
+        height: 630,
+        alt: "پارس آموز - نمای کلی سیستم مدیریت مدرسه"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "پارس آموز - سیستم مدیریت مدرسه آنلاین",
+    description: "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران",
+    images: ["/img/demos/vc1@2x.jpg"]
+  },
+  alternates: {
+    canonical: "https://parsamooz.com"
+  }
+};
 
 // Define custom font style
 const yekanFont = {
@@ -37,8 +80,101 @@ export default function Demo36() {
     setIsContactPopupOpen(false);
   };
 
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://parsamooz.com/#organization",
+        "name": "پارس آموز",
+        "alternateName": "Parsamooz",
+        "url": "https://parsamooz.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://parsamooz.com/img/logo-purple@2x.png",
+          "width": 400,
+          "height": 100
+        },
+        "description": "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران",
+        "foundingDate": "2020",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+98-21-22334455",
+          "contactType": "customer service",
+          "email": "info@parsamooz.com",
+          "availableLanguage": ["Persian", "English"]
+        },
+        "sameAs": [
+          "https://instagram.com/parsamooz",
+          "https://linkedin.com/company/parsamooz",
+          "https://twitter.com/parsamooz"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://parsamooz.com/#website",
+        "url": "https://parsamooz.com",
+        "name": "پارس آموز",
+        "description": "سیستم مدیریت مدرسه آنلاین",
+        "publisher": {
+          "@id": "https://parsamooz.com/#organization"
+        },
+        "inLanguage": "fa-IR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://parsamooz.com/#webpage",
+        "url": "https://parsamooz.com",
+        "name": "پارس آموز - سیستم مدیریت مدرسه آنلاین",
+        "isPartOf": {
+          "@id": "https://parsamooz.com/#website"
+        },
+        "about": {
+          "@id": "https://parsamooz.com/#organization"
+        },
+        "description": "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران با ۱۴+ سرویس تخصصی",
+        "breadcrumb": {
+          "@id": "https://parsamooz.com/#breadcrumb"
+        },
+        "inLanguage": "fa-IR"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "پارس آموز",
+        "description": "سیستم جامع مدیریت مدرسه آنلاین با قابلیت‌های پیشرفته",
+        "applicationCategory": "EducationApplication",
+        "operatingSystem": "Web Browser, iOS, Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "IRR",
+          "description": "دمو رایگان"
+        },
+        "featureList": [
+          "مدیریت دانش‌آموزان",
+          "آزمون آنلاین",
+          "بانک سوالات",
+          "حسابداری مدرسه",
+          "چت مدرسه",
+          "تقویم و رویدادها",
+          "گزارش‌گیری",
+          "داشبورد هوشمند"
+        ]
+      }
+    ]
+  };
+
   return (
     <Fragment>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+      
       <style jsx global>{`
         @font-face {
           font-family: 'IRANYekanX';
@@ -143,7 +279,7 @@ export default function Demo36() {
           <div className="container py-8">
             <div className="row text-center mb-6">
               <div className="col-lg-10 mx-auto">
-                <h3 className="display-6 text-gray-600 mb-3">دسترسی سریع به خدمات</h3>
+                <h2 className="display-6 text-gray-600 mb-3">دسترسی سریع به خدمات</h2>
                 <p className="lead text-gray-600 opacity-90">با یک کلیک به تمام سرویس‌های مدرسه آنلاین دسترسی داشته باشید</p>
               </div>
             </div>
@@ -151,17 +287,17 @@ export default function Demo36() {
             <div className="row gy-4">
               <div className="col-lg-3 col-md-6">
                 <div className="card bg-white border-0 shadow-lg h-100 hover-effect">
-                  <div className="card-body text-center p-4">
-                    <div className="icon btn btn-circle btn-lg btn-soft-primary mb-3">
+                  <article className="card-body text-center p-4">
+                    <div className="icon btn btn-circle btn-lg btn-soft-primary mb-3" aria-hidden="true">
                       <i className="uil uil-users-alt"></i>
                     </div>
-                    <h5 className="mb-2">سیستم‌های مدیریت</h5>
+                    <h3 className="mb-2">سیستم‌های مدیریت</h3>
                     <p className="mb-3 text-muted">مدیریت دانش‌آموزان، معلمان و کلاس‌ها</p>
                     <div className="d-flex gap-1 justify-content-center">
                       <a href="/initiation" className="btn btn-sm btn-primary rounded-pill">پایه</a>
                       <a href="/dashboard" className="btn btn-sm btn-outline-primary rounded-pill">داشبورد</a>
                     </div>
-                  </div>
+                  </article>
                 </div>
               </div>
               
@@ -171,7 +307,7 @@ export default function Demo36() {
                     <div className="icon btn btn-circle btn-lg btn-soft-yellow mb-3">
                       <i className="uil uil-graduation-cap"></i>
                     </div>
-                    <h5 className="mb-2">ارزیابی و آزمون</h5>
+                    <h3 className="mb-2">ارزیابی و آزمون</h3>
                     <p className="mb-3 text-muted">آزمون آنلاین، بانک سوالات و نمره‌دهی</p>
                     <div className="d-flex gap-1 justify-content-center flex-wrap">
                       <a href="/onlineexam" className="btn btn-sm btn-yellow rounded-pill">آزمون</a>
@@ -188,7 +324,7 @@ export default function Demo36() {
                     <div className="icon btn btn-circle btn-lg btn-soft-green mb-3">
                       <i className="uil uil-comment-dots"></i>
                     </div>
-                    <h5 className="mb-2">ارتباطات</h5>
+                    <h3 className="mb-2">ارتباطات</h3>
                     <p className="mb-3 text-muted">پیام‌رسانی، چت و مدیریت رویدادها</p>
                     <div className="d-flex gap-1 justify-content-center flex-wrap">
                       <a href="/communications" className="btn btn-sm btn-green rounded-pill">پیام</a>
@@ -205,7 +341,7 @@ export default function Demo36() {
                     <div className="icon btn btn-circle btn-lg btn-soft-purple mb-3">
                       <i className="uil uil-chart-bar"></i>
                     </div>
-                    <h5 className="mb-2">گزارشات و ابزارها</h5>
+                    <h3 className="mb-2">گزارشات و ابزارها</h3>
                     <p className="mb-3 text-muted">گزارشات، حسابداری و فایل منیجر</p>
                     <div className="d-flex gap-1 justify-content-center flex-wrap">
                       <a href="/accounting" className="btn btn-sm btn-purple rounded-pill">حسابداری</a>
@@ -284,10 +420,13 @@ export default function Demo36() {
                             <figure className="itooltip itooltip-yellow mt-9" title="سیستم‌های مدیریت پایه">
                               <div>
                                   <img
-                                  alt="سیستم‌های مدیریت پایه"
+                                  alt="سیستم‌های مدیریت پایه پارس آموز - مدیریت دانش آموزان و معلمان"
                                     className="shadow-lg rounded-top"
                                   src="/img/demos/fe1.jpg"
                                   srcSet="/img/demos/fe1@2x.jpg 2x"
+                                  loading="lazy"
+                                  width="300"
+                                  height="200"
                                   />
                               </div>
                               </figure>
