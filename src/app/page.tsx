@@ -139,7 +139,7 @@ export default function Demo36() {
         <Hero36 onDemoClick={openDemoPopup} />
 
         {/* ========== services navigation menu ========== */}
-        <section className="wrapper bg-gradient-primary">
+        <section className="wrapper bg-gradient-primary rtl-content">
           <div className="container py-8">
             <div className="row text-center mb-6">
               <div className="col-lg-10 mx-auto">
@@ -220,7 +220,7 @@ export default function Demo36() {
         </section>
 
         {/* ========== services section ========== */}
-        <section className="wrapper bg-light" id="services">
+        <section className="wrapper bg-light rtl-content" id="services">
           <div className="container py-14 py-md-18 pb-md-19">
             <div className="row mb-10">
               <div className="col-md-9 col-lg-7 col-xl-6 col-xxl-5 mx-auto">
@@ -596,7 +596,7 @@ export default function Demo36() {
         </section>
 
         {/* ========== comprehensive overview section ========== */}
-        <section className="wrapper bg-gradient-reverse-primary">
+        <section className="wrapper bg-gradient-reverse-primary rtl-content">
           <div className="container py-16 py-md-18">
             <div className="row text-center mb-12">
               <div className="col-lg-8 mx-auto">
@@ -733,7 +733,7 @@ export default function Demo36() {
         <Facts21 />
 
         {/* ========== detailed features section ========== */}
-        <section className="wrapper bg-light" id="all-features">
+        <section className="wrapper bg-light rtl-content" id="all-features">
           <div className="container pb-11 pb-md-14">
             <div className="row gx-lg-8 gx-xl-0 gy-10 align-items-center mb-14 mb-md-16">
               <div className="col-lg-6 position-relative">
@@ -938,7 +938,7 @@ export default function Demo36() {
         </section>
 
         {/* ========== technology section ========== */}
-        <section className="wrapper bg-gradient-primary">
+        <section className="wrapper bg-gradient-primary rtl-content">
           <div className="container pb-14 pb-md-16">
             <div className="row gx-0 mb-14 mb-md-16">
               <div className="col-9 col-sm-10 col-lg-9 mx-auto mt-n15 mt-md-n23">
@@ -1047,7 +1047,7 @@ export default function Demo36() {
         </section>
 
         {/* ========== inner page section ========== */}
-        <section className="wrapper bg-gradient-reverse-primary">
+        <section className="wrapper bg-gradient-reverse-primary rtl-content">
           <div className="container pb-10 pb-md-13">
             <div className="row mb-8 text-center">
               <div className="col-lg-8 col-xl-7 mx-auto">
@@ -1109,7 +1109,7 @@ export default function Demo36() {
         </section> */}
 
         {/* ========== call to action section ========== */}
-        <section className="wrapper bg-gradient-reverse-primary" id="contact">
+        <section className="wrapper bg-gradient-reverse-primary rtl-content" id="contact">
           <div className="container pt-xl-10 text-center">
             <div className="row">
               <div className="col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">

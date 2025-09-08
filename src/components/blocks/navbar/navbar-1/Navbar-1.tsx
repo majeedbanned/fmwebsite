@@ -78,79 +78,79 @@ export default function NavbarOne({
         </div>
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-          <ul className="navbar-nav" style={{ fontFamily: "'IRANYekanX', 'Arial', sans-serif", direction: 'rtl' }}>
+          <ul className="navbar-nav" style={{ fontFamily: "'IRANYekanX', 'Arial', sans-serif", direction: 'rtl', textAlign: 'right' }}>
             {/* ===================== services nav item ===================== */}
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">خدمات</a>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
                 <li className="dropdown dropdown-submenu dropend">
-                  <a href="#" className="dropdown-item dropdown-toggle">سیستم‌های مدیریت</a>
-                  <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="/initiation">مدیریت پایه</a></li>
-                    <li><a className="dropdown-item" href="/dashboard">داشبورد هوشمند</a></li>
+                  <a href="#" className="dropdown-item dropdown-toggle" style={{ textAlign: 'right' }}>سیستم‌های مدیریت</a>
+                  <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
+                    <li><a className="dropdown-item" href="/initiation" style={{ textAlign: 'right' }}>مدیریت پایه</a></li>
+                    <li><a className="dropdown-item" href="/dashboard" style={{ textAlign: 'right' }}>داشبورد هوشمند</a></li>
                   </ul>
                 </li>
                 <li className="dropdown dropdown-submenu dropend">
-                  <a href="#" className="dropdown-item dropdown-toggle">ارزیابی و آزمون</a>
-                  <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="/onlineexam">آزمون آنلاین</a></li>
-                    <li><a className="dropdown-item" href="/questionbank">بانک سوالات</a></li>
-                    <li><a className="dropdown-item" href="/gradingsystem">نمره‌دهی</a></li>
+                  <a href="#" className="dropdown-item dropdown-toggle" style={{ textAlign: 'right' }}>ارزیابی و آزمون</a>
+                  <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
+                    <li><a className="dropdown-item" href="/onlineexam" style={{ textAlign: 'right' }}>آزمون آنلاین</a></li>
+                    <li><a className="dropdown-item" href="/questionbank" style={{ textAlign: 'right' }}>بانک سوالات</a></li>
+                    <li><a className="dropdown-item" href="/gradingsystem" style={{ textAlign: 'right' }}>نمره‌دهی</a></li>
                   </ul>
                 </li>
                 <li className="dropdown dropdown-submenu dropend">
-                  <a href="#" className="dropdown-item dropdown-toggle">ارتباطات</a>
-                  <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="/communications">پیام‌رسانی</a></li>
-                    <li><a className="dropdown-item" href="/mychat">چت مدرسه</a></li>
-                    <li><a className="dropdown-item" href="/agenda">تقویم و رویدادها</a></li>
+                  <a href="#" className="dropdown-item dropdown-toggle" style={{ textAlign: 'right' }}>ارتباطات</a>
+                  <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
+                    <li><a className="dropdown-item" href="/communications" style={{ textAlign: 'right' }}>پیام‌رسانی</a></li>
+                    <li><a className="dropdown-item" href="/mychat" style={{ textAlign: 'right' }}>چت مدرسه</a></li>
+                    <li><a className="dropdown-item" href="/agenda" style={{ textAlign: 'right' }}>تقویم و رویدادها</a></li>
                   </ul>
                 </li>
                 <li className="dropdown dropdown-submenu dropend">
-                  <a href="#" className="dropdown-item dropdown-toggle">گزارشات و ابزارها</a>
-                  <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="/classsheet">گزارش کلاسی</a></li>
-                    <li><a className="dropdown-item" href="/monthlygrade">نمرات ماهانه</a></li>
-                    <li><a className="dropdown-item" href="/tactivities">فعالیت‌های معلمان</a></li>
-                    <li><a className="dropdown-item" href="/accounting">حسابداری</a></li>
-                    <li><a className="dropdown-item" href="/fileexplorer">فایل اکسپلورر</a></li>
+                  <a href="#" className="dropdown-item dropdown-toggle" style={{ textAlign: 'right' }}>گزارشات و ابزارها</a>
+                  <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
+                    <li><a className="dropdown-item" href="/classsheet" style={{ textAlign: 'right' }}>گزارش کلاسی</a></li>
+                    <li><a className="dropdown-item" href="/monthlygrade" style={{ textAlign: 'right' }}>نمرات ماهانه</a></li>
+                    <li><a className="dropdown-item" href="/tactivities" style={{ textAlign: 'right' }}>فعالیت‌های معلمان</a></li>
+                    <li><a className="dropdown-item" href="/accounting" style={{ textAlign: 'right' }}>حسابداری</a></li>
+                    <li><a className="dropdown-item" href="/fileexplorer" style={{ textAlign: 'right' }}>فایل اکسپلورر</a></li>
                   </ul>
                 </li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="/services-2">همه خدمات</a></li>
+                <li><a className="dropdown-item" href="/services-2" style={{ textAlign: 'right' }}>همه خدمات</a></li>
               </ul>
             </li>
 
             {/* ===================== about nav item ===================== */}
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">درباره ما</a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/about-us">درباره پارس آ موز</a></li>
-                <li><a className="dropdown-item" href="/our-team">تیم ما</a></li>
-                <li><a className="dropdown-item" href="/our-story">داستان ما</a></li>
-                <li><a className="dropdown-item" href="/careers">فرصت‌های شغلی</a></li>
+              <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
+                <li><a className="dropdown-item" href="/about-us" style={{ textAlign: 'right' }}>درباره پارس آ موز</a></li>
+                <li><a className="dropdown-item" href="/our-team" style={{ textAlign: 'right' }}>تیم ما</a></li>
+                <li><a className="dropdown-item" href="/our-story" style={{ textAlign: 'right' }}>داستان ما</a></li>
+                <li><a className="dropdown-item" href="/careers" style={{ textAlign: 'right' }}>فرصت‌های شغلی</a></li>
               </ul>
             </li>
 
             {/* ===================== solutions nav item ===================== */}
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">راه‌حل‌ها</a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/pricing">تعرفه‌ها</a></li>
-                <li><a className="dropdown-item" href="/demo">درخواست دمو</a></li>
-                <li><a className="dropdown-item" href="/case-studies">مطالعات موردی</a></li>
-                <li><a className="dropdown-item" href="/integrations">یکپارچه‌سازی</a></li>
+              <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
+                <li><a className="dropdown-item" href="/pricing" style={{ textAlign: 'right' }}>تعرفه‌ها</a></li>
+                <li><a className="dropdown-item" href="/demo" style={{ textAlign: 'right' }}>درخواست دمو</a></li>
+                <li><a className="dropdown-item" href="/case-studies" style={{ textAlign: 'right' }}>مطالعات موردی</a></li>
+                <li><a className="dropdown-item" href="/integrations" style={{ textAlign: 'right' }}>یکپارچه‌سازی</a></li>
               </ul>
             </li>
 
             {/* ===================== support nav item ===================== */}
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">پشتیبانی</a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/help-center">مرکز راهنمایی</a></li>
-                <li><a className="dropdown-item" href="/documentation">مستندات</a></li>
-                <li><a className="dropdown-item" href="/tutorials">آموزش‌ها</a></li>
-                <li><a className="dropdown-item" href="/contact">تماس با ما</a></li>
+              <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
+                <li><a className="dropdown-item" href="/help-center" style={{ textAlign: 'right' }}>مرکز راهنمایی</a></li>
+                <li><a className="dropdown-item" href="/documentation" style={{ textAlign: 'right' }}>مستندات</a></li>
+                <li><a className="dropdown-item" href="/tutorials" style={{ textAlign: 'right' }}>آموزش‌ها</a></li>
+                <li><a className="dropdown-item" href="/contact" style={{ textAlign: 'right' }}>تماس با ما</a></li>
               </ul>
             </li>
 
