@@ -1,7 +1,6 @@
 "use client";
 
 import { Fragment, useState } from "react";
-import type { Metadata } from "next";
 // GLOBAL CUSTOM COMPONENTS
 import Tooltip from "components/Tooltip";
 import Navbar from "components/blocks/navbar/navbar-1";
@@ -12,48 +11,6 @@ import CountUp from "components/reuseable/CountUp";
 import NextLink from "components/reuseable/links/NextLink";
 import ContactPopup from "components/ContactPopup";
 import Projects from "./projects";
-
-export const metadata: Metadata = {
-  title: "پارس آموز - سیستم مدیریت مدرسه آنلاین | نرم افزار مدرسه",
-  description: "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران با ۱۴+ سرویس تخصصی: آزمون آنلاین، مدیریت دانش‌آموزان، حسابداری، چت مدرسه و بیشتر. دمو رایگان دریافت کنید.",
-  keywords: [
-    "سیستم مدیریت مدرسه آنلاین",
-    "نرم افزار مدرسه",
-    "آزمون آنلاین",
-    "پارس آموز",
-    "مدیریت دانش آموزان",
-    "حسابداری مدرسه",
-    "بانک سوالات",
-    "کارنامه آنلاین",
-    "چت مدرسه",
-    "تقویم مدرسه",
-    "سیستم نمره دهی",
-    "مدیریت معلمان",
-    "داشبورد مدرسه"
-  ],
-  openGraph: {
-    title: "پارس آموز - سیستم مدیریت مدرسه آنلاین",
-    description: "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران با ۱۴+ سرویس تخصصی",
-    url: "https://parsamooz.com",
-    images: [
-      {
-        url: "/img/demos/vc1@2x.jpg",
-        width: 1200,
-        height: 630,
-        alt: "پارس آموز - نمای کلی سیستم مدیریت مدرسه"
-      }
-    ]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "پارس آموز - سیستم مدیریت مدرسه آنلاین",
-    description: "پیشرفته‌ترین سیستم مدیریت مدرسه آنلاین ایران",
-    images: ["/img/demos/vc1@2x.jpg"]
-  },
-  alternates: {
-    canonical: "https://parsamooz.com"
-  }
-};
 
 // Define custom font style
 const yekanFont = {
