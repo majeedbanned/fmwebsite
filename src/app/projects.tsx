@@ -6,7 +6,7 @@ import useIsotope from "hooks/useIsotope";
 
 // School software comprehensive services data in Farsi
 const filterList = [
-  { id: 1, title: 'همه خدمات', value: '*' },
+
   { id: 2, title: 'مدیریت پایه', value: '.management' },
   { id: 3, title: 'ارزیابی و آزمون', value: '.assessment' },
   { id: 4, title: 'ارتباطات', value: '.communication' },

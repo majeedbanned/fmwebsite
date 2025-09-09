@@ -116,8 +116,8 @@ export default function NavbarOne({
                     <li><a className="dropdown-item" href="/fileexplorer" style={{ textAlign: 'right' }}>فایل اکسپلورر</a></li>
                   </ul>
                 </li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="/services-2" style={{ textAlign: 'right' }}>همه خدمات</a></li>
+                {/* <li><hr className="dropdown-divider" /></li>
+                <li><a className="dropdown-item" href="/services-2" style={{ textAlign: 'right' }}>همه خدمات</a></li> */}
               </ul>
             </li>
 
@@ -136,7 +136,7 @@ export default function NavbarOne({
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">راه‌حل‌ها</a>
               <ul className="dropdown-menu" style={{ direction: 'rtl', textAlign: 'right' }}>
-                <li><a className="dropdown-item" href="/pricing" style={{ textAlign: 'right' }}>تعرفه‌ها</a></li>
+                {/* <li><a className="dropdown-item" href="/pricing" style={{ textAlign: 'right' }}>تعرفه‌ها</a></li> */}
                 <li><a className="dropdown-item" href="/demo" style={{ textAlign: 'right' }}>درخواست دمو</a></li>
                 <li><a className="dropdown-item" href="/case-studies" style={{ textAlign: 'right' }}>مطالعات موردی</a></li>
                 <li><a className="dropdown-item" href="/integrations" style={{ textAlign: 'right' }}>یکپارچه‌سازی</a></li>
