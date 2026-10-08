@@ -101,3 +101,4 @@ Settings → Apps → Discord → Storage → Clear Cache
 1. اسکرین‌شات از تنظیمات Discord بفرستید
 2. مدل گوشی و نسخه Discord را اعلام کنید
 3. بگویید آیا در Discord دسکتاپ پیام را می‌بینید یا نه
+
